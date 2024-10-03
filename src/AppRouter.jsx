@@ -1,12 +1,16 @@
-import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Pages/Home";
+import TimerHome from "./Pages/TimerHome";
+import HomePage from "./Pages/HomePage";
 
 // Define routes
 const routing = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <TimerHome />,
+  },
+  {
+    path: "/HomePage",
+    element: <HomePage />,
   },
 ]);
 

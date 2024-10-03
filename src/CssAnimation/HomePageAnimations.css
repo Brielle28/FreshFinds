@@ -1,0 +1,108 @@
+/* Zoom and dance animation for the image */
+@keyframes zoomAndDance {
+    0%, 100% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    50% {
+      transform: scale(1) rotate(-3deg);
+    }
+    75% {
+      transform: scale(1.1) rotate(0deg);
+    }
+  }
+  
+  /* Sliding left text animation */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Sliding right text animation */
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Sliding up animation for smaller texts */
+  @keyframes slideInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInBounce {
+    0% {
+      transform: translateY(-100%); /* Start from above */
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10%); /* Move slightly down (bounce) */
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0); /* Settle in place */
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Background color animation */
+  @keyframes bgColorChange {
+    0% {
+      background-color: #d7f3d0;
+    }
+    50% {
+      background-color: #8deca9;
+    }
+    100% {
+      background-color: #d7f3d0;
+    }
+  }
+  
+  /* Apply animations */
+  .animate-zoomAndDance {
+    animation: zoomAndDance 3s infinite ease-in-out;
+  }
+  
+  .animate-slideInLeft {
+    animation: slideInLeft 1s ease-out;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  .animate-slideInUp {
+    animation: slideInUp 1s ease-out;
+  }
+  .animate-slideInBounce {
+    /* animation: slideInUp 1s ease-out; */
+    animation: slideInBounce 2s ease forwards; /* Adjust duration and easing as needed */
+  }
+  
+  .animate-bgColorChange {
+    animation: bgColorChange 10s infinite alternate;
+  }
+  
