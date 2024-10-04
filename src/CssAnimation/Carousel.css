@@ -1,0 +1,24 @@
+/* Carousel outer container */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Inner carousel wrapper */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* Adjust based on the number of items */
+}
+
+/* Each carousel item */
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Active button style */
+.btn-active {
+    background-color: #6ddb51;
+    color: white;
+}

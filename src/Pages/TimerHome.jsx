@@ -16,7 +16,7 @@ const TimerHome = () => {
   }, [navigate]);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-[#d7f3d0] animate-bgColorChange">
+    <div className="w-full h-screen flex flex-col items-center justify-center bg-[#d7f3d0] ">
       <div
         className="w-48 h-48 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain border-red-600 animate-zoomAndDance"
         style={{ backgroundImage: "url('/fruity.png')" }}
