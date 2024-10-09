@@ -1,5 +1,5 @@
 import CarouselItem from "./CategoryCarouselItem";
-import {categories } from "../../Utils/categories"
+import {categories } from "../../../Utils/categories"
 const Category = () => {
     return (
         <div className='flex flex-col items-start justify-start w-[80%] my-8'>
@@ -11,6 +11,7 @@ const Category = () => {
                         key={index}
                         imageUrl={category.imageUrl}
                         categoryName={category.name}
+                        links = {category.links}
                     />
                 ))}
             </div>

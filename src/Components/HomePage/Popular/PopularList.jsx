@@ -1,4 +1,4 @@
-import { PopularItems } from '../../Utils/PopularItems';
+import { PopularItems } from '../../../Utils/PopularItems';
 import PopularCard from './PopularCard';
 const PopularList = () => {
     return (
