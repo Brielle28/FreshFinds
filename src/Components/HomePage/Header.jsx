@@ -72,7 +72,7 @@ const Header = () => {
         </div>
 
         {/* Search bar */}
-        <div className="relative w-full max-w-[600px] mt-6 md:mt-10">
+        <div className="relative w-full max-w-[1000px] mt-6 md:mt-10">
           <input
             type="text"
             className="w-full py-2 pl-10 pr-4 rounded-[35px] outline-0 text-sm md:text-base"
