@@ -1,0 +1,22 @@
+export const MeatAndSeafoodItems = [
+    { imageUrl: "/chicken_breast.png", title: "Chicken Breast", price: "$5.99" },
+    { imageUrl: "/beef_steak.png", title: "Beef Steak", price: "$12.99" },
+    { imageUrl: "/salmon_fillet.png", title: "Salmon Fillet", price: "$8.49" },
+    { imageUrl: "/pork_chop.png", title: "Pork Chop", price: "$6.99" },
+    { imageUrl: "/shrimp.png", title: "Shrimp", price: "$14.99" },
+    { imageUrl: "/lobster.png", title: "Lobster", price: "$29.99" },
+    { imageUrl: "/turkey_leg.png", title: "Turkey Leg", price: "$4.99" },
+    { imageUrl: "/crab.png", title: "Crab", price: "$21.99" },
+    { imageUrl: "/bacon.png", title: "Bacon", price: "$7.49" },
+    { imageUrl: "/tilapia.png", title: "Tilapia", price: "$5.29" },
+    { imageUrl: "/lamb_rack.png", title: "Lamb Rack", price: "$15.99" },
+    { imageUrl: "/tuna_steak.png", title: "Tuna Steak", price: "$10.49" },
+    { imageUrl: "/ground_beef.png", title: "Ground Beef", price: "$4.99" },
+    { imageUrl: "/scallops.png", title: "Scallops", price: "$18.99" },
+    { imageUrl: "/duck_breast.png", title: "Duck Breast", price: "$13.99" },
+    { imageUrl: "/cod_fillet.png", title: "Cod Fillet", price: "$7.99" },
+    { imageUrl: "/sausage.png", title: "Sausage", price: "$3.99" },
+    { imageUrl: "/clams.png", title: "Clams", price: "$9.99" },
+    { imageUrl: "/oysters.png", title: "Oysters", price: "$19.99" },
+    { imageUrl: "/king_crab.png", title: "King Crab", price: "$39.99" }
+];
