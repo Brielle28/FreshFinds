@@ -1,0 +1,21 @@
+export const DairyProductsItems = [
+    { imageUrl: "/milk.png", title: "Milk", price: "$2.49" },
+    { imageUrl: "/cheddar_cheese.png", title: "Cheddar Cheese", price: "$4.99" },
+    { imageUrl: "/yogurt.png", title: "Yogurt", price: "$1.99" },
+    { imageUrl: "/butter.png", title: "Butter", price: "$3.49" },
+    { imageUrl: "/sour_cream.png", title: "Sour Cream", price: "$2.29" },
+    { imageUrl: "/cream_cheese.png", title: "Cream Cheese", price: "$2.99" },
+    { imageUrl: "/mozzarella_cheese.png", title: "Mozzarella Cheese", price: "$4.49" },
+    { imageUrl: "/cottage_cheese.png", title: "Cottage Cheese", price: "$3.79" },
+    { imageUrl: "/whipping_cream.png", title: "Whipping Cream", price: "$3.99" },
+    { imageUrl: "/parmesan_cheese.png", title: "Parmesan Cheese", price: "$5.49" },
+    { imageUrl: "/ice_cream.png", title: "Ice Cream", price: "$4.99" },
+    { imageUrl: "/almond_milk.png", title: "Almond Milk", price: "$2.99" },
+    { imageUrl: "/goat_cheese.png", title: "Goat Cheese", price: "$6.49" },
+    { imageUrl: "/greek_yogurt.png", title: "Greek Yogurt", price: "$3.29" },
+    { imageUrl: "/evaporated_milk.png", title: "Evaporated Milk", price: "$2.29" },
+    { imageUrl: "/powdered_milk.png", title: "Powdered Milk", price: "$5.99" },
+    { imageUrl: "/ricotta_cheese.png", title: "Ricotta Cheese", price: "$4.29" },
+    { imageUrl: "/soy_milk.png", title: "Soy Milk", price: "$2.49" },
+    { imageUrl: "/coconut_yogurt.png", title: "Coconut Yogurt", price: "$3.79" }
+];
