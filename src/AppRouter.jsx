@@ -7,6 +7,7 @@ import DairyProducts from "./Pages/DairyProducts";
 import Bakery from "./Pages/Bakery";
 import Beverages from "./Pages/Beverages";
 import FrozenFoods from "./Pages/FrozenFoods";
+import UserProvider from "./Components/Context/UserProvider";
 
 // Define routes
 const routing = createBrowserRouter([
@@ -40,12 +41,18 @@ const routing = createBrowserRouter([
   },
   {
     path: "/FrozenFoods",
-    element: < FrozenFoods />,
+    element: <FrozenFoods />,
   },
 ]);
 
 const AppRouter = () => {
-  return <RouterProvider router={routing} />;
+  return (
+    <>
+      <UserProvider>
+        <RouterProvider router={routing} />;
+      </UserProvider>
+    </>
+  );
 };
 
 export default AppRouter;
