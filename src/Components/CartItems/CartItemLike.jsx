@@ -5,34 +5,43 @@ import { useState, useEffect } from "react";
 const CartItemLike = ({ item, likeArray, setLikeArray }) => {
   const [isLike, setIsLike] = useState(false);
 
-  // Effect to check if the item is already liked (when loading the component)
+  // Effect to initialize the like state from localStorage or likeArray on component mount
   useEffect(() => {
-    const alreadyLiked = likeArray.some(likedItem => likedItem.id === item.id);
-    setIsLike(alreadyLiked);
-  }, [likeArray, item.id]);
+    const storedLikes = JSON.parse(localStorage.getItem('likedItems')) || [];
+    const alreadyLiked = storedLikes.some(likedItem => likedItem.id === item.id);
+    setIsLike(alreadyLiked); // Sync isLike state with what's in localStorage
+  }, [item.id]);
+
+  // Save liked items to localStorage whenever likeArray changes
+  useEffect(() => {
+    localStorage.setItem('likedItems', JSON.stringify(likeArray));
+  }, [likeArray]);
 
   // Function to handle the like button click
   const handleIsLike = () => {
     setIsLike(prevIsLike => {
       if (!prevIsLike) {
-        // Add item if it is liked
+        // Add the item to likeArray if it's liked
         if (!item.id) {
-          item.id = Date.now() + Math.random(); // Ensure unique id
+          item.id = Date.now() + Math.random(); // Assign a unique id if not present
         }
         setLikeArray(prevLikeArray => {
-          // Avoid adding duplicates
+          // Avoid duplicates
           const alreadyLiked = prevLikeArray.some(likedItem => likedItem.id === item.id);
           if (!alreadyLiked) {
-            return [...prevLikeArray, item];
+            const updatedLikes = [...prevLikeArray, item];
+            return updatedLikes;
           }
           return prevLikeArray;
         });
       } else {
-        // Remove item if it is unliked
-        setLikeArray(prevLikeArray => prevLikeArray.filter(likedItem => likedItem.id !== item.id));
+        // Remove the item from likeArray if it's unliked
+        setLikeArray(prevLikeArray => {
+          const updatedLikes = prevLikeArray.filter(likedItem => likedItem.id !== item.id);
+          return updatedLikes;
+        });
       }
-
-      return !prevIsLike; // Toggle like state
+      return !prevIsLike; // Toggle the isLike state
     });
   };
 

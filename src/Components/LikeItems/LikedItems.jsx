@@ -1,27 +1,30 @@
 import { useContext } from "react";
 import { UserContext } from "../Context/UserProvider";
-import { IoClose } from "react-icons/io5";
+import CartItemsRemoveLike from "../CartItems/CartItemsRemoveLike";
+
 const LikedItems = () => {
   const { likeArray } = useContext(UserContext);
 
+
+  console.log(likeArray)
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 md:py-10 md:px-20">
+    <div className="flex flex-col items-center justify-center w-full px-4 md:py-10 md:px-20">
       {likeArray.length > 0 ? (
-        <div className="flex flex-wrap items-center justify-center gap-5">
-          {likeArray.map((like) => (
-            <div key={like.id} className="p-4">
+        <div
+          className="grid items-center justify-center grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-5"
+        >
+          {likeArray.map((item) => ( // Mapping over likeArray to pass each item
+            <div key={item.id} className="p-4">
               <div className="bg-[#D7F3D0] p-5 rounded-[5px] relative">
-                <button className="p-2 rounded-[30px] bg-white absolute right-3 top-3">
-                  <IoClose className="text-green-500" />
-                </button>
+                <CartItemsRemoveLike item={item} /> {/* Pass item here */}
                 <div
                   className="w-40 h-40 bg-center bg-no-repeat bg-contain"
-                  style={{ backgroundImage: `url(${like.imageUrl})` }}
+                  style={{ backgroundImage: `url(${item.imageUrl})` }}
                 ></div>
               </div>
-              <h1 className="font-bold text-[20px]">{like.title}</h1>
+              <h1 className="font-bold text-[20px]">{item.title}</h1>
               <h5 className="font-medium text-green-500 text-[15px]">
-                {like.price}
+                {item.price}
                 <span className="text-black font-medium text-[11px]">/Kg</span>
               </h5>
             </div>
