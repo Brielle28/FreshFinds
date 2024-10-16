@@ -8,6 +8,7 @@ import Bakery from "./Pages/Bakery";
 import Beverages from "./Pages/Beverages";
 import FrozenFoods from "./Pages/FrozenFoods";
 import UserProvider from "./Components/Context/UserProvider";
+import LikeItems from "./Pages/LikeItems";
 
 // Define routes
 const routing = createBrowserRouter([
@@ -42,6 +43,10 @@ const routing = createBrowserRouter([
   {
     path: "/FrozenFoods",
     element: <FrozenFoods />,
+  },
+  {
+    path: "/LikeItems",
+    element: <LikeItems />,
   },
 ]);
 

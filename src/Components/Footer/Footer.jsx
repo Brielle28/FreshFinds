@@ -56,12 +56,14 @@ const Footer = () => {
                     </h3>
                 </div>
                 </Link>
+                <Link to="/LikeItems">
                 <div className='flex flex-col items-center justify-center '>
                     <FaRegHeart className='text-[24px] md:text-[30px]' />
                     <h3 className='text-[14px] md:text-[18px] text-black font-light'>
                         Favourite
                     </h3>
                 </div>
+                </Link>
                 <div className='flex flex-col items-center justify-center '>
                     <FiShoppingCart className='text-[24px] md:text-[30px]' />
                     <h3 className='text-[14px] md:text-[18px] text-black font-light'>
