@@ -12,7 +12,7 @@
 //                         <button className="btn mt-5 px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]"> Order Now </button>
 //                     </div>
 //                     <div
-//                         className="w-52 h-52 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mr-10"
+//                         className="mr-10 bg-center bg-no-repeat bg-contain w-52 h-52 sm:w-64 sm:h-64 animate-zoomAndDance"
 //                         style={{ backgroundImage: "url('/basket2.png')" }}
 //                     ></div>
 //                 </div>
@@ -26,7 +26,7 @@
 //                         <button className="btn mt-5 px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]"> shop Now </button>
 //                     </div>
 //                     <div
-//                         className="w-56 h-56 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mr-20"
+//                         className="w-56 h-56 mr-20 bg-center bg-no-repeat bg-contain sm:w-64 sm:h-64 animate-zoomAndDance"
 //                         style={{ backgroundImage: "url('/fruitsplash.png')" }}
 //                     ></div>
 //                 </div>
@@ -40,7 +40,7 @@
 //                         <button className="btn mt-5 px-10 text-[#6ddb51] font-semibold hover:text-white hover:bg-[#6ddb51]"> Order Now </button>
 //                     </div>
 //                     <div
-//                         className="w-52 h-52 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mr-10"
+//                         className="mr-10 bg-center bg-no-repeat bg-contain w-52 h-52 sm:w-64 sm:h-64 animate-zoomAndDance"
 //                         style={{ backgroundImage: "url('/scatteredFruit.png')" }}
 //                     ></div>
 //                 </div>
@@ -53,12 +53,12 @@
 //                         <button className="btn mt-5 px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]"> Order Now </button>
 //                     </div>
 //                     <div
-//                         className="w-52 h-52 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mr-10"
+//                         className="mr-10 bg-center bg-no-repeat bg-contain w-52 h-52 sm:w-64 sm:h-64 animate-zoomAndDance"
 //                         style={{ backgroundImage: "url('/orange.png')" }}
 //                     ></div>
 //                 </div>
 //             </div>
-//             <div className="flex w-full justify-center gap-2 py-2">
+//             <div className="flex justify-center w-full gap-2 py-2">
 //                 <a href="#item1" className="btn btn-xs">1</a>
 //                 <a href="#item2" className="btn btn-xs">2</a>
 //                 <a href="#item3" className="btn btn-xs">3</a>
@@ -74,7 +74,7 @@
 const Carousel = () => {
     return (
         <>
-            <div className="carousel w-[90%] sm:w-[80%] mt-10 rounded-[20px]">
+            <div className="carousel w-[90%] sm:w-[80%] pt-[190px] md:pt-[235px] rounded-[20px]">
                 {/* first item */}
                 <div id="item1" className="flex flex-col items-center sm:flex-row sm:items-center  justify-center carousel-item w-full px-5 sm:px-10 bg-[#d7f3d0]">
                     <div className='flex flex-col items-center sm:items-start justify-center w-full sm:w-[50%]'>
@@ -84,7 +84,7 @@ const Carousel = () => {
                         <button className="btn mt-3 sm:mt-5 px-6 sm:px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]">Order Now</button>
                     </div>
                     <div
-                        className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mb-5 sm:mb-0"
+                        className="w-40 h-40 mb-5 bg-center bg-no-repeat bg-contain sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-zoomAndDance sm:mb-0"
                         style={{ backgroundImage: "url('/basket2.png')" }}
                     ></div>
                 </div>
@@ -98,7 +98,7 @@ const Carousel = () => {
                         <button className="btn mt-3 sm:mt-5 px-6 sm:px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]">Order Now</button>
                     </div>
                     <div
-                        className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mb-5 sm:mb-0"
+                        className="w-40 h-40 mb-5 bg-center bg-no-repeat bg-contain sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-zoomAndDance sm:mb-0"
                         style={{ backgroundImage: "url('/basket2.png')" }}
                     ></div>
                 </div>
@@ -112,7 +112,7 @@ const Carousel = () => {
                         <button className="btn mt-3 sm:mt-5 px-6 sm:px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]">Order Now</button>
                     </div>
                     <div
-                        className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mb-5 sm:mb-0"
+                        className="w-40 h-40 mb-5 bg-center bg-no-repeat bg-contain sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-zoomAndDance sm:mb-0"
                         style={{ backgroundImage: "url('/basket2.png')" }}
                     ></div>
                 </div>
@@ -126,13 +126,13 @@ const Carousel = () => {
                         <button className="btn mt-3 sm:mt-5 px-6 sm:px-10 text-black font-semibold hover:text-white hover:bg-[#6ddb51]">Order Now</button>
                     </div>
                     <div
-                        className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 bg-center bg-no-repeat bg-contain animate-zoomAndDance mb-5 sm:mb-0"
+                        className="w-40 h-40 mb-5 bg-center bg-no-repeat bg-contain sm:w-52 sm:h-52 lg:w-64 lg:h-64 animate-zoomAndDance sm:mb-0"
                         style={{ backgroundImage: "url('/basket2.png')" }}
                     ></div>
                 </div>
             </div>
 
-            <div className="flex w-full justify-center gap-2 py-2">
+            <div className="flex justify-center w-full gap-2 py-2">
                 <a href="#item1" className="btn btn-xs">1</a>
                 <a href="#item2" className="btn btn-xs">2</a>
                 <a href="#item3" className="btn btn-xs">3</a>

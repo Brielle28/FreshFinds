@@ -6,7 +6,7 @@ const LikedItems = () => {
   const { likeArray } = useContext(UserContext);
 
 
-  console.log(likeArray)
+  // console.log(likeArray)
   return (
     <div className="flex flex-col items-center justify-center w-full px-4 md:py-10 md:px-20">
       {likeArray.length > 0 ? (

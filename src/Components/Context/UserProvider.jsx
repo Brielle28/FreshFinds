@@ -1,31 +1,89 @@
 import React, { createContext, useState, useEffect } from "react";
 
-// Create the UserContext
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [likeArray, setLikeArray] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
-  // On component mount, load the likeArray from localStorage if available
+  // Load from localStorage on mount
   useEffect(() => {
     const storedLikes = localStorage.getItem('likeArray');
-    if (storedLikes) {
-      setLikeArray(JSON.parse(storedLikes));
-    }
+    const storedCart = localStorage.getItem('cartItems');
+    
+    if (storedLikes) setLikeArray(JSON.parse(storedLikes));
+    if (storedCart) setCartItems(JSON.parse(storedCart));
   }, []);
 
-  // Save likeArray to localStorage whenever it changes
+  // Save to localStorage when updated
   useEffect(() => {
     if (likeArray.length > 0) {
       localStorage.setItem('likeArray', JSON.stringify(likeArray));
     } else {
-      localStorage.removeItem('likeArray'); // Clean up if array is empty
+      localStorage.removeItem('likeArray');
     }
   }, [likeArray]);
+
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    } else {
+      localStorage.removeItem('cartItems');
+    }
+  }, [cartItems]);
+
+  const addToCart = (item) => {
+    setCartItems(prevItems => {
+      // Check if item already exists in cart
+      const existingItemIndex = prevItems.findIndex(cartItem => cartItem.id === item.id);
+      
+      if (existingItemIndex !== -1) {
+        // Create a new array with the updated item
+        const newItems = prevItems.map((cartItem, index) => 
+          index === existingItemIndex
+            ? { ...cartItem, quantity: (cartItem.quantity || 1) + 1 }
+            : cartItem
+        );
+        return newItems;
+      }
+      
+      // Add new item with quantity 1
+      return [...prevItems, { ...item, quantity: 1 }];
+    });
+  };
+
+  const removeFromCart = (itemId) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
+  };
+
+  const updateQuantity = (itemId, newQuantity) => {
+    if (newQuantity < 1) {
+      removeFromCart(itemId);
+      return;
+    }
+    
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === itemId
+          ? { ...item, quantity: newQuantity }
+          : item
+      )
+    );
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
 
   const value = {
     likeArray,
     setLikeArray,
+    cartItems,
+    setCartItems,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart
   };
 
   return (

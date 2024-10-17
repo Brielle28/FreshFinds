@@ -18,10 +18,10 @@ const CartItemsRemoveLike = ({ item }) => {
 
   return (
     <button
-      className="p-2 rounded-[30px] bg-white absolute right-3 top-3"
+      className="p-2 rounded-[30px] bg-white absolute right-3 top-3 "
       onClick={handleRemoveItem} // Call the removal function on click
     >
-      <IoClose className="text-green-500" />
+      <IoClose className="text-green-500 hover:text-red-600" />
     </button>
   );
 };
