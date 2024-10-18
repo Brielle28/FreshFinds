@@ -24,6 +24,7 @@ const UserProvider = ({ children }) => {
     }
   }, [likeArray]);
 
+  console.log(cartItems, "from provider")
   useEffect(() => {
     if (cartItems.length > 0) {
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -56,20 +57,30 @@ const UserProvider = ({ children }) => {
     setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
   };
 
-  const updateQuantity = (itemId, newQuantity) => {
-    if (newQuantity < 1) {
-      removeFromCart(itemId);
-      return;
-    }
-    
-    setCartItems(prevItems =>
-      prevItems.map(item =>
+  const updateQuantity = (itemId, change) => {
+    setCartItems(prevItems => {
+      // Find the item to update
+      const itemToUpdate = prevItems.find(item => item.id === itemId);
+      
+      if (!itemToUpdate) return prevItems; // If item doesn't exist, return current items
+      
+      // Calculate the new quantity
+      const newQuantity = itemToUpdate.quantity + change;
+  
+      if (newQuantity < 1) {
+        removeFromCart(itemId);
+        return prevItems; // Return the updated list after removal
+      }
+      
+      // Update the quantity of the item
+      return prevItems.map(item =>
         item.id === itemId
           ? { ...item, quantity: newQuantity }
           : item
-      )
-    );
+      );
+    });
   };
+  
 
   const clearCart = () => {
     setCartItems([]);

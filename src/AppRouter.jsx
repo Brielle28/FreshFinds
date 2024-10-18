@@ -9,6 +9,7 @@ import Beverages from "./Pages/Beverages";
 import FrozenFoods from "./Pages/FrozenFoods";
 import UserProvider from "./Components/Context/UserProvider";
 import LikeItems from "./Pages/LikeItems";
+import ItemsInCart from "./Pages/ItemsInCart";
 
 // Define routes
 const routing = createBrowserRouter([
@@ -47,6 +48,10 @@ const routing = createBrowserRouter([
   {
     path: "/LikeItems",
     element: <LikeItems />,
+  },
+  {
+    path: "/ItemsInCart",
+    element: <ItemsInCart />,
   },
 ]);
 
