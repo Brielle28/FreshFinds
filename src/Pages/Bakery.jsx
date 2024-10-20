@@ -1,17 +1,19 @@
-import BakeryHeader from '../Components/Bakery/BakeryHeader'
-import Footer from '../Components/Footer/Footer'
-import BakeryItemList from '../Components/Bakery/BakeryItemList'
+import BakeryHeader from "../Components/Bakery/BakeryHeader";
+import Footer from "../Components/Footer/Footer";
+import BakeryItemList from "../Components/Bakery/BakeryItemList";
+import Layout from "../Components/Layout";
 
 const Bakery = () => {
   return (
     <>
-    <div className='flex flex-col items-center justify-center'>
-      <BakeryHeader/>
-      <BakeryItemList/>
-      <Footer/>      
-    </div>
+      <Layout>
+        <div className="flex flex-col items-center justify-center">
+          <BakeryHeader />
+          <BakeryItemList />
+        </div>
+      </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Bakery
+export default Bakery;

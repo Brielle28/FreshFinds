@@ -1,14 +1,17 @@
 import ItemsInCartHeader from "../Components/ItemsInCart/ItemsInCartHeader";
 import ItemsInCartList from "../Components/ItemsInCart/ItemsInCartList";
-import Footer from "../Components/Footer/Footer"
+import Footer from "../Components/Footer/Footer";
+import Layout from "../Components/Layout";
 const ItemsInCart = () => {
   return (
     <>
-      <div>
-        <ItemsInCartHeader />
-        <ItemsInCartList />
-        <Footer/>
-      </div>
+      <Layout>
+        <div>
+          <ItemsInCartHeader />
+          <ItemsInCartList />
+          {/* <Footer /> */}
+        </div>
+      </Layout>
     </>
   );
 };
