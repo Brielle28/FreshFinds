@@ -1,5 +1,4 @@
 import BakeryHeader from "../Components/Bakery/BakeryHeader";
-import Footer from "../Components/Footer/Footer";
 import BakeryItemList from "../Components/Bakery/BakeryItemList";
 import Layout from "../Components/Layout";
 

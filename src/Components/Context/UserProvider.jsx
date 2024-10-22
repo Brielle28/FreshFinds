@@ -8,9 +8,9 @@ const UserProvider = ({ children }) => {
 
   // Load from localStorage on mount
   useEffect(() => {
-    const storedLikes = localStorage.getItem('likeArray');
-    const storedCart = localStorage.getItem('cartItems');
-    
+    const storedLikes = localStorage.getItem("likeArray");
+    const storedCart = localStorage.getItem("cartItems");
+
     if (storedLikes) setLikeArray(JSON.parse(storedLikes));
     if (storedCart) setCartItems(JSON.parse(storedCart));
   }, []);
@@ -18,72 +18,88 @@ const UserProvider = ({ children }) => {
   // Save to localStorage when updated
   useEffect(() => {
     if (likeArray.length > 0) {
-      localStorage.setItem('likeArray', JSON.stringify(likeArray));
+      localStorage.setItem("likeArray", JSON.stringify(likeArray));
     } else {
-      localStorage.removeItem('likeArray');
+      localStorage.removeItem("likeArray");
     }
   }, [likeArray]);
 
-  console.log(cartItems, "from provider")
+  console.log(cartItems, "from provider");
   useEffect(() => {
     if (cartItems.length > 0) {
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
     } else {
-      localStorage.removeItem('cartItems');
+      localStorage.removeItem("cartItems");
     }
   }, [cartItems]);
 
   const addToCart = (item) => {
-    setCartItems(prevItems => {
+    setCartItems((prevItems) => {
       // Check if item already exists in cart
-      const existingItemIndex = prevItems.findIndex(cartItem => cartItem.id === item.id);
-      
+      const existingItemIndex = prevItems.findIndex(
+        (cartItem) => cartItem.id === item.id
+      );
+
       if (existingItemIndex !== -1) {
         // Create a new array with the updated item
-        const newItems = prevItems.map((cartItem, index) => 
+        const newItems = prevItems.map((cartItem, index) =>
           index === existingItemIndex
             ? { ...cartItem, quantity: (cartItem.quantity || 1) + 1 }
             : cartItem
         );
         return newItems;
       }
-      
+
       // Add new item with quantity 1
       return [...prevItems, { ...item, quantity: 1 }];
     });
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
 
   const updateQuantity = (itemId, change) => {
-    setCartItems(prevItems => {
+    setCartItems((prevItems) => {
       // Find the item to update
-      const itemToUpdate = prevItems.find(item => item.id === itemId);
-      
+      const itemToUpdate = prevItems.find((item) => item.id === itemId);
+
       if (!itemToUpdate) return prevItems; // If item doesn't exist, return current items
-      
+
       // Calculate the new quantity
       const newQuantity = itemToUpdate.quantity + change;
-  
+
       if (newQuantity < 1) {
         removeFromCart(itemId);
         return prevItems; // Return the updated list after removal
       }
-      
+
       // Update the quantity of the item
-      return prevItems.map(item =>
-        item.id === itemId
-          ? { ...item, quantity: newQuantity }
-          : item
+      return prevItems.map((item) =>
+        item.id === itemId ? { ...item, quantity: newQuantity } : item
       );
     });
   };
-  
 
   const clearCart = () => {
     setCartItems([]);
+  };
+
+  //CHECKOUT STEPS
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const steps = ["Personal info", "Payment Method", "Summary"];
+
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+  const handlePreviousStep = () => {
+    if (currentStep < steps.length + 1) {
+      setCurrentStep((prevStep) => prevStep - 1);
+    }
   };
 
   const value = {
@@ -94,14 +110,15 @@ const UserProvider = ({ children }) => {
     addToCart,
     removeFromCart,
     updateQuantity,
-    clearCart
+    clearCart,
+    currentStep,
+    setCurrentStep,
+    handleNext,
+    steps,
+    handlePreviousStep,
   };
 
-  return (
-    <UserContext.Provider value={value}>
-      {children}
-    </UserContext.Provider>
-  );
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;

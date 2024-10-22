@@ -1,6 +1,5 @@
 import ItemsInCartHeader from "../Components/ItemsInCart/ItemsInCartHeader";
 import ItemsInCartList from "../Components/ItemsInCart/ItemsInCartList";
-import Footer from "../Components/Footer/Footer";
 import Layout from "../Components/Layout";
 const ItemsInCart = () => {
   return (

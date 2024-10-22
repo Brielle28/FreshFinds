@@ -1,5 +1,4 @@
 import BeveragesHeader from "../Components/Beverages/BeveragesHeader";
-import Footer from "../Components/Footer/Footer";
 import BeveragesItemsList from "../Components/Beverages/BeveragesItemsList";
 import Layout from "../Components/Layout";
 

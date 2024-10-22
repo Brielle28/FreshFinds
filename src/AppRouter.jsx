@@ -10,6 +10,7 @@ import FrozenFoods from "./Pages/FrozenFoods";
 import UserProvider from "./Components/Context/UserProvider";
 import LikeItems from "./Pages/LikeItems";
 import ItemsInCart from "./Pages/ItemsInCart";
+import CheckOut from "./Pages/CheckOut";
 
 // Define routes
 const routing = createBrowserRouter([
@@ -52,6 +53,10 @@ const routing = createBrowserRouter([
   {
     path: "/ItemsInCart",
     element: <ItemsInCart />,
+  },
+  {
+    path: "/CheckOut",
+    element: <CheckOut />,
   },
 ]);
 

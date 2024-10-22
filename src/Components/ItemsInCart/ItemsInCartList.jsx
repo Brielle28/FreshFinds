@@ -9,7 +9,7 @@ const ItemsInCartList = () => {
   console.log(cartItems, "from items in cart");
 
   return (
-    <div className=" flex flex-col items-center justify-center mx-auto pt-[120px] px-4 sm:px-8 lg:px-16">
+    <div className=" flex flex-col items-center justify-center mx-auto pt-[2px] px-4 sm:px-8 lg:px-16">
       {cartItems.length > 0 ? (
         <div className="grid items-center justify-center grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {cartItems.map((item) => (
@@ -65,11 +65,7 @@ const ItemsInCartList = () => {
           </p>
         </div>
       )}
-      {cartItems.length > 0 && (
-        <button className="py-3 text-white bg-green-500 rounded-lg w-[100%] md:w-[86%] lg:w-[86%] mt-10 mb-10">
-          <h1 className="font-bold text-[20px]">Checkout</h1>
-        </button>
-      )}
+     
     </div>
   );
 };

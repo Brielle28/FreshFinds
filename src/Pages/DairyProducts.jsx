@@ -1,6 +1,5 @@
 import DairyProductsHeader from "../Components/DairyProducts/DairyProductsHeader";
 import DairyProductsItemsList from "../Components/DairyProducts/DairyProductsItemsList";
-import Footer from "../Components/Footer/Footer";
 import Layout from "../Components/Layout";
 const DairyProducts = () => {
   return (

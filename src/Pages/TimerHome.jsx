@@ -18,7 +18,7 @@ const TimerHome = () => {
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center bg-[#d7f3d0] ">
       <div
-        className="w-48 h-48 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain border-red-600 animate-zoomAndDance"
+        className="w-48 h-48 bg-center bg-no-repeat bg-contain border-red-600 sm:w-64 sm:h-64 animate-zoomAndDance"
         style={{ backgroundImage: "url('/fruity.png')" }}
       ></div>
 
@@ -29,7 +29,7 @@ const TimerHome = () => {
         Groceries Products
       </p>
 
-      <div className="flex flex-col items-center justify-center mt-8 sm:mt-10 px-3 sm:px-0 text-center">
+      <div className="flex flex-col items-center justify-center px-3 mt-8 text-center sm:mt-10 sm:px-0">
         <p className="text-gray-400 text-[12px] sm:text-[14px] lg:text-[16px] animate-slideInUp">
           Florem ipsum is simply a dummy text of the
         </p>
@@ -40,7 +40,7 @@ const TimerHome = () => {
     </div>
     // <div className="w-full h-screen flex flex-col items-center justify-center bg-[#019934] ">
     //   <div
-    //     className="w-40 h-40 sm:w-64 sm:h-64 bg-center bg-no-repeat bg-contain animate-slideInBounce"
+    //     className="w-40 h-40 bg-center bg-no-repeat bg-contain sm:w-64 sm:h-64 animate-slideInBounce"
     //     style={{ backgroundImage: "url('/fruit1.png')" }}
     //   ></div>
 
@@ -52,3 +52,14 @@ const TimerHome = () => {
 };
 
 export default TimerHome;
+
+
+
+
+  // const handleNextStep = () => {
+  //   setCurrentStep((prevStep) => prevStep + 1);
+  // };
+
+  // const handlePreviousStep = () => {
+  //   setCurrentStep((prevStep) => prevStep - 1);
+  // };

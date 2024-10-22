@@ -1,4 +1,3 @@
-import Footer from "../Components/Footer/Footer";
 import FruitsAndVegetablesHeader from "../Components/FruitsAndVegetables/FruitsAndVegetablesHeader";
 import FruitsAndVegetablesItemList from "../Components/FruitsAndVegetables/FruitsAndVegetablesItemList";
 import Layout from "../Components/Layout";

@@ -21,9 +21,10 @@ const CartItemLike = ({ item, likeArray, setLikeArray }) => {
   const handleIsLike = () => {
     setIsLike(prevIsLike => {
       if (!prevIsLike) {
-        // Add the item to likeArray if it's liked
+        // Check if item already has an id
         if (!item.id) {
-          item.id = Date.now() + Math.random(); // Assign a unique id if not present
+          console.error("Item does not have a valid id");
+          return prevIsLike; // Prevent action if id is invalid
         }
         setLikeArray(prevLikeArray => {
           // Avoid duplicates

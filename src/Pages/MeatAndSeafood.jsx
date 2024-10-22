@@ -1,4 +1,3 @@
-import Footer from "../Components/Footer/Footer";
 import Layout from "../Components/Layout";
 import MeatAndSeafoodHeader from "../Components/MeatAndSeafood/MeatAndSeafoodHeader";
 import MeatAndSeafoodItemList from "../Components/MeatAndSeafood/MeatAndSeafoodItemList";

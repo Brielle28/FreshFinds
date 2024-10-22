@@ -1,4 +1,3 @@
-import Footer from "../Components/Footer/Footer";
 import FrozenFoodsHeader from "../Components/FrozenFoods/FrozenFoodsHeader";
 import FrozenFoodsItemsList from "../Components/FrozenFoods/FrozenFoodsItemsList";
 import Layout from "../Components/Layout";
