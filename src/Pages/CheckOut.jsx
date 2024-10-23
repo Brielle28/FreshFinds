@@ -12,9 +12,9 @@ const CheckOut = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center w-full">
-        <CheckOutHeader />
-        <CheckoutSteps />
+      <div className="flex flex-col items-center justify-center w-full gap-0 bg-white">
+          <CheckOutHeader />
+          <CheckoutSteps />
         <div className="flex items-center justify-center w-full">
           {currentStep === 0 && <CheckOutPersonalInfoAndSummary />}
           {currentStep === 1 && <CheckOutPaymentAndSummary />}
@@ -24,6 +24,5 @@ const CheckOut = () => {
     </Layout>
   );
 };
-
 
 export default CheckOut;

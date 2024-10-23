@@ -1,7 +1,7 @@
 import { MdFormatListBulletedAdd } from "react-icons/md";
 const CheckOutHeader = () => {
   return (
-    <div className="sticky top-0 z-20 flex flex-col items-center justify-center w-full px-4 pt-10 pb-5 bg-white sm:px-6 md:px-20 lg:px-24">
+    <div className="sticky top-0 z-20 flex flex-col items-center justify-center w-full pt-5 bg-white md:pt-10 md:pb-5 md:px-20 lg:px-24">
       <div className="flex items-center justify-center w-full">
         <div className="flex items-center justify-center gap-2">
           <h1 className="text-black font-bold text-lg sm:text-xl md:text-3xl lg:text-[35px]">

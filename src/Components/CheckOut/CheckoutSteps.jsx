@@ -6,8 +6,9 @@ const CheckoutSteps = () => {
 
   return (
     <>
-        <div className="sticky top-[100px] z-10 flex items-center justify-center w-[70%] bg-white lg:ml-36">
-          <ol className="flex items-center justify-center w-[50%] py-4">
+      <div className="fixed z-10 flex items-center justify-center w-full top-[40px] md:top-[90px] bg-white">
+        <div className="flex items-center justify-center w-[85%] ml-10 bg-white lg:ml-52">
+          <ol className="flex items-center justify-center w-[100%] py-4">
             {steps.map((step, index) => (
               <li
                 key={index}
@@ -54,6 +55,7 @@ const CheckoutSteps = () => {
             ))}
           </ol>
         </div>
+      </div>
     </>
   );
 };
