@@ -66,7 +66,7 @@ const PersonalInfo = () => {
         Personal Info
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-full mt-5">
+      <form onSubmit={handleSubmit} className="w-[90%] mt-5">
         {/* Full Name */}
         <div className="flex flex-col items-start justify-center w-full gap-1">
           <h1 className="font-semibold">Full Name</h1>

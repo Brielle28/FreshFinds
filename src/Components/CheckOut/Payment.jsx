@@ -53,12 +53,12 @@ const Payment = () => {
   };
 
   return (
-    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px]">
+    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px] ">
       <h2 className="text-black font-bold text-[20px] sm:text-[25px]">
         Payment Method
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-full mt-5">
+      <form onSubmit={handleSubmit} className="w-[93%] mt-5">
         {/* Card Number */}
         <div className="flex flex-col items-start justify-center w-full gap-1">
           <h1 className="font-semibold">Card Number</h1>

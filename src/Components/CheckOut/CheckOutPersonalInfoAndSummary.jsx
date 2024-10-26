@@ -1,13 +1,13 @@
-import OrderSummary from "../Summary/OrderSummary";
+import OrderSummary from "../CheckOut/OrderSummary";
 import PersonalInfo from "./PersonalInfo";
 
 const CheckOutPersonalInfoAndSummary = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-start justify-center w-[90%] mt-20 gap-[40px] md:gap-[5%]">
-      <div className="flex-1 md:w-[52%]">
+    <div className="flex flex-col-reverse md:flex-row items-start justify-center w-[100%] mt-20 gap-[10px] md:gap-0 lg:gap-0">
+      <div className=" md:w-[46%]">
         <PersonalInfo />
       </div>
-      <div className="flex-1 md:w-[35%]">
+      <div className=" md:w-[35%]">
         <OrderSummary />
       </div>
     </div>
