@@ -61,7 +61,7 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-green-100 rounded-[7px] shadow-xl">
+    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px]">
       <h2 className="text-black font-bold text-[20px] sm:text-[25px]">
         Personal Info
       </h2>
@@ -74,7 +74,7 @@ const PersonalInfo = () => {
             className={`flex items-center w-full gap-2 border-2 ${
               errors.fullName
                 ? "bg-red-100 border-red-400"
-                : "bg-green-100 border-gray-400"
+                : "bg-white border-black"
             } input input-bordered`}
           >
             <svg
@@ -106,7 +106,7 @@ const PersonalInfo = () => {
             className={`flex items-center w-full gap-2 border-2 ${
               errors.email
                 ? "bg-red-100 border-red-400"
-                : "bg-green-100 border-gray-400"
+                : "bg-white border-black"
             } input input-bordered`}
           >
             <svg
@@ -139,7 +139,7 @@ const PersonalInfo = () => {
             className={`flex items-center w-full gap-2 border-2 ${
               errors.streetAddress
                 ? "bg-red-100 border-red-400"
-                : "bg-green-100 border-gray-400"
+                : "bg-white border-black"
             } input input-bordered`}
           >
             <FaRegAddressBook />
@@ -166,7 +166,7 @@ const PersonalInfo = () => {
               className={`flex items-center w-full gap-2 border-2 ${
                 errors.state
                   ? "bg-red-100 border-red-400"
-                  : "bg-green-100 border-gray-400"
+                  : "bg-white border-black"
               } input input-bordered`}
             >
               <svg
@@ -198,7 +198,7 @@ const PersonalInfo = () => {
               className={`flex items-center w-full gap-2 border-2 ${
                 errors.city
                   ? "bg-red-100 border-red-400"
-                  : "bg-green-100 border-gray-400"
+                  : "bg-white border-black"
               } input input-bordered`}
             >
               <PiCityFill />
@@ -225,7 +225,7 @@ const PersonalInfo = () => {
               className={`flex items-center w-full gap-2 border-2 ${
                 errors.zipCode
                   ? "bg-red-100 border-red-400"
-                  : "bg-green-100 border-gray-400"
+                  : "bg-white border-black"
               } input input-bordered`}
             >
               <MdOutlineSignpost />
@@ -250,7 +250,7 @@ const PersonalInfo = () => {
               className={`flex items-center w-full gap-2 border-2 ${
                 errors.phoneNumber
                   ? "bg-red-100 border-red-400"
-                  : "bg-green-100 border-gray-400"
+                  : "bg-white border-black"
               } input input-bordered`}
             >
               <FcCellPhone />
