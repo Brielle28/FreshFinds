@@ -4,8 +4,8 @@ import CheckoutSteps from "../Components/CheckOut/CheckoutSteps";
 import Layout from "../Components/Layout";
 import CheckOutPaymentAndSummary from "../Components/CheckOut/CheckOutPaymentAndSummary";
 import CheckOutPersonalInfoAndSummary from "../Components/CheckOut/CheckOutPersonalInfoAndSummary";
-import OrderConfirmation from "../Components/CheckOut/OrderConfirmation";
 import { UserContext } from "../Components/Context/UserProvider";
+import CheckoutOrderConfirmationAndOrderSummary from "../Components/CheckOut/CheckoutOrderConfirmationAndOrderSummary";
 
 const CheckOut = () => {
   const { currentStep } = useContext(UserContext);
@@ -18,7 +18,7 @@ const CheckOut = () => {
         <div className="flex items-center justify-center w-full">
           {currentStep === 0 && <CheckOutPersonalInfoAndSummary />}
           {currentStep === 1 && <CheckOutPaymentAndSummary />}
-          {currentStep === 2 && <OrderConfirmation />}
+          {currentStep === 2 && < CheckoutOrderConfirmationAndOrderSummary />}
         </div>
       </div>
     </Layout>

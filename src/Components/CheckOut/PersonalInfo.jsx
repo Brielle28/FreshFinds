@@ -12,7 +12,8 @@ const PersonalInfo = () => {
     city: "",
     zipCode: "",
     phoneNumber: "",
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     streetAddress: "",
   });
@@ -22,7 +23,8 @@ const PersonalInfo = () => {
     city: false,
     zipCode: false,
     phoneNumber: false,
-    fullName: false,
+    firstName: false,
+    lastName: false,
     email: false,
     streetAddress: false,
   });
@@ -33,7 +35,8 @@ const PersonalInfo = () => {
       city: formData.city.trim() === "",
       zipCode: formData.zipCode.trim().length !== 5,
       phoneNumber: formData.phoneNumber.trim().length !== 11,
-      fullName: formData.fullName.trim() === "",
+      firstName: formData.firstName.trim() === "",
+      lastName: formData.lastName.trim() === "",
       email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
       streetAddress: formData.streetAddress.trim() === "",
     };
@@ -67,12 +70,12 @@ const PersonalInfo = () => {
       </h2>
 
       <form onSubmit={handleSubmit} className="w-[90%] mt-5">
-        {/* Full Name */}
+        {/* First Name */}
         <div className="flex flex-col items-start justify-center w-full gap-1">
-          <h1 className="font-semibold">Full Name</h1>
+          <h1 className="font-semibold">First Name</h1>
           <label
             className={`flex items-center w-full gap-2 border-2 ${
-              errors.fullName
+              errors.firstName
                 ? "bg-red-100 border-red-400"
                 : "bg-white border-black"
             } input input-bordered`}
@@ -87,15 +90,47 @@ const PersonalInfo = () => {
             </svg>
             <input
               type="text"
-              name="fullName"
+              name="firstName"
               className="w-full bg-transparent grow"
-              placeholder="Full Name"
-              value={formData.fullName}
+              placeholder="First Name"
+              value={formData.firstName}
               onChange={handleChange}
             />
           </label>
-          {errors.fullName && (
-            <p className="text-sm text-red-600">Full name is required</p>
+          {errors.firstName && (
+            <p className="text-sm text-red-600">First name is required</p>
+          )}
+        </div>
+
+        {/* Last Name */}
+        <div className="flex flex-col items-start justify-center w-full gap-1 mt-4">
+          <h1 className="font-semibold">Last Name</h1>
+          <label
+            className={`flex items-center w-full gap-2 border-2 ${
+              errors.lastName
+                ? "bg-red-100 border-red-400"
+                : "bg-white border-black"
+            } input input-bordered`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="w-4 h-4 opacity-70"
+            >
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+            </svg>
+            <input
+              type="text"
+              name="lastName"
+              className="w-full bg-transparent grow"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </label>
+          {errors.lastName && (
+            <p className="text-sm text-red-600">Last name is required</p>
           )}
         </div>
 
