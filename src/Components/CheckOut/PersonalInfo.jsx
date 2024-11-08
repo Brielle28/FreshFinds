@@ -6,17 +6,8 @@ import { MdOutlineSignpost } from "react-icons/md";
 import { FcCellPhone } from "react-icons/fc";
 
 const PersonalInfo = () => {
-  const { handleNext } = useContext(UserContext);
-  const [formData, setFormData] = useState({
-    state: "",
-    city: "",
-    zipCode: "",
-    phoneNumber: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    streetAddress: "",
-  });
+  const { handleNext, formData, setFormData } = useContext(UserContext);
+
 
   const [errors, setErrors] = useState({
     state: false,
@@ -63,6 +54,7 @@ const PersonalInfo = () => {
     }
   };
 
+  console.log(formData,"from personal info")
   return (
     <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px]">
       <h2 className="text-black font-bold text-[20px] sm:text-[25px]">

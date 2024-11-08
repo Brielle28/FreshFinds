@@ -102,6 +102,26 @@ const UserProvider = ({ children }) => {
     }
   };
 
+  //form
+  const [formData, setFormData] = useState({
+    state: "",
+    city: "",
+    zipCode: "",
+    phoneNumber: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    streetAddress: "",
+  });
+
+  //payment form data
+  const [paymentFormData, setPaymentFormData] = useState({
+    cardNumber: "",
+    expirationDate: "",
+    cvv: "",
+    cardName: "",
+  });
+
   const value = {
     likeArray,
     setLikeArray,
@@ -116,6 +136,10 @@ const UserProvider = ({ children }) => {
     handleNext,
     steps,
     handlePreviousStep,
+    formData,
+    setFormData,
+    setPaymentFormData,
+    paymentFormData,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

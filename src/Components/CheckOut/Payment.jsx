@@ -7,13 +7,8 @@ import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { HiArrowCircleRight } from "react-icons/hi";
 import { HiArrowCircleLeft } from "react-icons/hi";
 const Payment = () => {
-  const { handleNext, handlePreviousStep } = useContext(UserContext);
-  const [formData, setFormData] = useState({
-    cardNumber: "",
-    expirationDate: "",
-    cvv: "",
-    cardName: "",
-  });
+  const { handleNext, handlePreviousStep, paymentFormData, setPaymentFormData} = useContext(UserContext);
+ 
 
   const [errors, setErrors] = useState({
     cardNumber: false,
@@ -24,10 +19,10 @@ const Payment = () => {
 
   const handleValidation = () => {
     const newErrors = {
-      cardNumber: formData.cardNumber.trim().length !== 16, // Card number should be 16 digits
-      expirationDate: !/^\d{2}\/\d{2}$/.test(formData.expirationDate), // MM/YY format
-      cvv: formData.cvv.trim().length !== 3, // CVV should be 3 digits
-      cardName: formData.cardName.trim() === "",
+      cardNumber: paymentFormData.cardNumber.trim().length !== 16, // Card number should be 16 digits
+      expirationDate: !/^\d{2}\/\d{2}$/.test(paymentFormData.expirationDate), // MM/YY format
+      cvv: paymentFormData.cvv.trim().length !== 3, // CVV should be 3 digits
+      cardName: paymentFormData.cardName.trim() === "",
     };
     setErrors(newErrors);
 
@@ -36,7 +31,7 @@ const Payment = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
+    setPaymentFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -45,13 +40,13 @@ const Payment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      console.log(formData, "Form submitted");
+      console.log(paymentFormData, "Form submitted");
       handleNext();
     } else {
       console.log("Validation failed");
     }
   };
-
+console.log(paymentFormData, "this is payment form data")
   return (
     <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px] ">
       <h2 className="text-black font-bold text-[20px] sm:text-[25px]">
@@ -75,7 +70,7 @@ const Payment = () => {
               name="cardNumber"
               className="w-full bg-transparent grow"
               placeholder="1234-1234-1234-1234"
-              value={formData.cardNumber}
+              value={paymentFormData.cardNumber}
               onChange={handleChange}
             />
           </label>
@@ -103,7 +98,7 @@ const Payment = () => {
                 name="expirationDate"
                 className="w-full bg-transparent grow"
                 placeholder="MM/YY"
-                value={formData.expirationDate}
+                value={paymentFormData.expirationDate}
                 onChange={handleChange}
               />
             </label>
@@ -130,7 +125,7 @@ const Payment = () => {
                 name="cvv"
                 className="w-full bg-transparent grow"
                 placeholder="CVC"
-                value={formData.cvv}
+                value={paymentFormData.cvv}
                 onChange={handleChange}
               />
             </label>
@@ -156,7 +151,7 @@ const Payment = () => {
               name="cardName"
               className="w-full bg-transparent grow"
               placeholder="Enter the name on the card"
-              value={formData.cardName}
+              value={paymentFormData.cardName}
               onChange={handleChange}
             />
           </label>
