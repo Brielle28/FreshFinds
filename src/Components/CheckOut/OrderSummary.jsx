@@ -3,7 +3,7 @@ import { UserContext } from "../Context/UserProvider";
 import { RxQuestionMarkCircled } from "react-icons/rx";
 
 const OrderSummary = () => {
-  const { cartItems } = useContext(UserContext);
+  const { cartItems, getTotalAmount } = useContext(UserContext);
 
   return (
     <div className="flex flex-col items-start justify-start w-full md:px-0 px-5 bg-white rounded-lg md:w-[100%]">
@@ -65,7 +65,7 @@ const OrderSummary = () => {
             Subtotal
             <RxQuestionMarkCircled className="ml-2" />
           </h1>
-          <p className="text-sm font-semibold sm:text-base">$0.00</p>
+          <p className="text-sm font-semibold sm:text-base">${getTotalAmount()}</p>
         </div>
         <div className="flex items-center justify-between pb-2 mb-2 border-b border-gray-300">
           <h1 className="text-sm font-semibold sm:text-base">
@@ -78,7 +78,7 @@ const OrderSummary = () => {
             Total
             <RxQuestionMarkCircled className="ml-2" />
           </h1>
-          <p className="text-sm font-semibold sm:text-base">$0.00</p>
+          <p className="text-sm font-semibold sm:text-base">${getTotalAmount()}</p>
         </div>
       </div>
     </div>

@@ -85,6 +85,63 @@ const UserProvider = ({ children }) => {
     setCartItems([]);
   };
 
+  const getTotalAmount = () => {
+    return cartItems.reduce((total, item) => {
+      // Remove currency symbols and any non-numeric characters except decimal point
+      const priceString = item.price.toString().replace(/[^0-9.]/g, '');
+      const price = parseFloat(priceString);
+      const quantity = item.quantity || 1;
+      
+      // For debugging
+      console.log({
+        itemTitle: item.title,
+        originalPrice: item.price,
+        cleanedPrice: priceString,
+        parsedPrice: price,
+        quantity: quantity,
+        itemTotal: price * quantity
+      });
+  
+      if (isNaN(price)) {
+        console.warn(`Invalid price for item ${item.title}:`, item.price);
+        return total;
+      }
+  
+      return total + (price * quantity);
+    }, 0).toFixed(2); // Round to 2 decimal places
+  };
+  
+  // Alternative version if your prices include commas for thousands
+  // const getTotalAmount = () => {
+  //   return cartItems.reduce((total, item) => {
+  //     // Remove currency symbols and convert commas to handle thousand separators
+  //     const priceString = item.price.toString()
+  //       .replace(/[^0-9.,]/g, '') // Remove everything except numbers, dots, and commas
+  //       .replace(',', ''); // Remove commas if they're used as thousand separators
+      
+  //     const price = parseFloat(priceString);
+  //     const quantity = item.quantity || 1;
+      
+  //     // For debugging
+  //     console.log({
+  //       itemTitle: item.title,
+  //       originalPrice: item.price,
+  //       cleanedPrice: priceString,
+  //       parsedPrice: price,
+  //       quantity: quantity,
+  //       itemTotal: price * quantity
+  //     });
+  
+  //     if (isNaN(price)) {
+  //       console.warn(`Invalid price for item ${item.title}:`, item.price);
+  //       return total;
+  //     }
+  
+  //     return total + (price * quantity);
+  //   }, 0).toFixed(2); // Round to 2 decimal places
+  // };
+  
+  
   //CHECKOUT STEPS
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -140,6 +197,7 @@ const UserProvider = ({ children }) => {
     setFormData,
     setPaymentFormData,
     paymentFormData,
+    getTotalAmount,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
