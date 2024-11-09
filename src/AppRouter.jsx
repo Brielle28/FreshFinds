@@ -1,16 +1,13 @@
+// src/AppRouter.js
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TimerHome from "./Pages/TimerHome";
 import HomePage from "./Pages/HomePage";
-import FruitsAndVegetables from "./Pages/FruitsAndVegetables";
-import MeatAndSeafood from "./Pages/MeatAndSeafood";
-import DairyProducts from "./Pages/DairyProducts";
-import Bakery from "./Pages/Bakery";
-import Beverages from "./Pages/Beverages";
-import FrozenFoods from "./Pages/FrozenFoods";
 import UserProvider from "./Components/Context/UserProvider";
 import LikeItems from "./Pages/LikeItems";
 import ItemsInCart from "./Pages/ItemsInCart";
 import CheckOut from "./Pages/CheckOut";
+import Section from "./Pages/Section";
+import ItemDetails from "./Pages/ItemDetails"; // Ensure this is imported
 
 // Define routes
 const routing = createBrowserRouter([
@@ -21,30 +18,6 @@ const routing = createBrowserRouter([
   {
     path: "/HomePage",
     element: <HomePage />,
-  },
-  {
-    path: "/FruitsAndVegetables",
-    element: <FruitsAndVegetables />,
-  },
-  {
-    path: "/MeatAndSeafood",
-    element: <MeatAndSeafood />,
-  },
-  {
-    path: "/DairyProducts",
-    element: <DairyProducts />,
-  },
-  {
-    path: "/Bakery",
-    element: <Bakery />,
-  },
-  {
-    path: "/Beverages",
-    element: <Beverages />,
-  },
-  {
-    path: "/FrozenFoods",
-    element: <FrozenFoods />,
   },
   {
     path: "/LikeItems",
@@ -58,15 +31,21 @@ const routing = createBrowserRouter([
     path: "/CheckOut",
     element: <CheckOut />,
   },
+  {
+    path: "/section/:sectionName",
+    element: <Section />,
+  },
+  {
+    path: "/item/:id",
+    element: <ItemDetails />,
+  },
 ]);
 
 const AppRouter = () => {
   return (
-    <>
-      <UserProvider>
-        <RouterProvider router={routing} />;
-      </UserProvider>
-    </>
+    <UserProvider>
+      <RouterProvider router={routing} />
+    </UserProvider>
   );
 };
 
