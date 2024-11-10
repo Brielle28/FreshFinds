@@ -10,7 +10,7 @@ const Footer = () => {
   const { cartItems } = useContext(UserContext);
   return (
     <>
-      <div className="sticky bottom-0 flex flex-row items-center justify-between px-4 sm:px-[50px] md:px-[175px] py-4 w-full bg-white">
+      <div className="sticky bottom-0 flex flex-row items-center justify-between px-4 sm:px-[50px] md:px-[175px] py-4 w-full bg-white z-50">
         <Link to="/HomePage">
           <div className="flex flex-col items-center justify-center">
             <IoHome className="text-[24px] md:text-[30px]" />

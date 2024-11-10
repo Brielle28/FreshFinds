@@ -1,27 +1,51 @@
+// export const MeatAndSeafoodItems = [
+//   // Poultry
+//   { id: 143, imageUrl: "/chicken_breast.png", title: "Chicken Breast", price: "$5.99", category: "Poultry" },
+//   { id: 149, imageUrl: "/turkey_leg.png", title: "Turkey Leg", price: "$4.99", category: "Poultry" },
+//   { id: 157, imageUrl: "/duck_breast.png", title: "Duck Breast", price: "$13.99", category: "Poultry" },
+
+//   // Beef and Pork
+//   { id: 144, imageUrl: "/beef_steak.png", title: "Beef Steak", price: "$12.99", category: "Beef" },
+//   { id: 146, imageUrl: "/pork_chop.png", title: "Pork Chop", price: "$6.99", category: "Pork" },
+//   { id: 151, imageUrl: "/bacon.png", title: "Bacon", price: "$7.49", category: "Beef" },
+//   { id: 153, imageUrl: "/lamb_rack.png", title: "Lamb Rack", price: "$15.99", category: "Beef" },
+//   { id: 155, imageUrl: "/ground_beef.png", title: "Ground Beef", price: "$4.99", category: "Beef" },
+//   { id: 159, imageUrl: "/sausage.png", title: "Sausage", price: "$3.99", category: "Beef" },
+
+//   // Fish and Seafood
+//   { id: 145, imageUrl: "/salmon_fillet.png", title: "Salmon Fillet", price: "$8.49", category: "Seafood" },
+//   { id: 147, imageUrl: "/shrimp.png", title: "Shrimp", price: "$14.99", category: "Seafood" },
+//   { id: 148, imageUrl: "/lobster.png", title: "Lobster", price: "$29.99", category: "Seafood" },
+//   { id: 150, imageUrl: "/crab.png", title: "Crab", price: "$21.99", category: "Seafood" },
+//   { id: 152, imageUrl: "/tilapia.png", title: "Tilapia", price: "$5.29", category: "Seafood" },
+//   { id: 154, imageUrl: "/tuna_steak.png", title: "Tuna Steak", price: "$10.49", category: "Seafood" },
+//   { id: 156, imageUrl: "/scallops.png", title: "Scallops", price: "$18.99", category: "Seafood" },
+//   { id: 158, imageUrl: "/cod_fillet.png", title: "Cod Fillet", price: "$7.99", category: "Seafood" },
+//   { id: 160, imageUrl: "/clams.png", title: "Clams", price: "$9.99", category: "Seafood" },
+//   { id: 161, imageUrl: "/oysters.png", title: "Oysters", price: "$19.99", category: "Seafood" },
+//   { id: 162, imageUrl: "/king_crab.png", title: "King Crab", price: "$39.99", category: "Seafood" }
+// ];
 export const MeatAndSeafoodItems = [
   // Poultry
-  { id: 143, imageUrl: "/chicken_breast.png", title: "Chicken Breast", price: "$5.99", category: "Poultry" },
-  { id: 149, imageUrl: "/turkey_leg.png", title: "Turkey Leg", price: "$4.99", category: "Poultry" },
-  { id: 157, imageUrl: "/duck_breast.png", title: "Duck Breast", price: "$13.99", category: "Poultry" },
+  { id: 143, imageUrl: "/chicken_breast.png", title: "Chicken Breast", price: "$5.99", category: "Poultry", description: "Chicken Breast: A lean and versatile cut of poultry, chicken breast is known for its mild flavor and tender texture. Perfect for grilling, pan-searing, or baking, it is a great choice for a healthy meal. Its low-fat content and high protein make it a favorite for fitness enthusiasts. Marinate it with your favorite spices, or use it in salads, wraps, or sandwiches." },
+  { id: 149, imageUrl: "/turkey_leg.png", title: "Turkey Leg", price: "$4.99", category: "Poultry", description: "Turkey Leg: The turkey leg is a hearty, flavorful cut from the turkey, offering a rich taste and juicy texture. Often enjoyed during holidays, it's also perfect for slow roasting or grilling. With its slightly gamey flavor, the turkey leg pairs well with herbs like rosemary and thyme. It’s a substantial meal option that can be served with a variety of sides." },
+  { id: 157, imageUrl: "/duck_breast.png", title: "Duck Breast", price: "$13.99", category: "Poultry", description: "Duck Breast: Known for its rich, succulent flavor, duck breast is a luxurious poultry option. It features a crispy skin when cooked properly, adding a delightful texture. Duck breast pairs beautifully with sweet and savory sauces, such as an orange glaze or balsamic reduction. A gourmet dish for those who appreciate a bold and refined taste, it’s ideal for roasting or pan-searing." },
 
   // Beef and Pork
-  { id: 144, imageUrl: "/beef_steak.png", title: "Beef Steak", price: "$12.99", category: "Beef" },
-  { id: 146, imageUrl: "/pork_chop.png", title: "Pork Chop", price: "$6.99", category: "Pork" },
-  { id: 151, imageUrl: "/bacon.png", title: "Bacon", price: "$7.49", category: "Beef" },
-  { id: 153, imageUrl: "/lamb_rack.png", title: "Lamb Rack", price: "$15.99", category: "Beef" },
-  { id: 155, imageUrl: "/ground_beef.png", title: "Ground Beef", price: "$4.99", category: "Beef" },
-  { id: 159, imageUrl: "/sausage.png", title: "Sausage", price: "$3.99", category: "Beef" },
+  { id: 144, imageUrl: "/beef_steak.png", title: "Beef Steak", price: "$12.99", category: "Beef", description: "Beef Steak: A classic choice for steak lovers, beef steak is tender, juicy, and full of flavor. Whether you prefer ribeye, sirloin, or filet mignon, there is a cut for every taste. Grilled, pan-seared, or broiled, it’s a versatile protein that can be seasoned simply with salt and pepper or complemented with marinades. Perfect for a decadent dinner, beef steak is great with mashed potatoes, grilled vegetables, or a side salad." },
+  { id: 146, imageUrl: "/pork_chop.png", title: "Pork Chop", price: "$6.99", category: "Pork", description: "Pork Chop: A beloved cut of pork, pork chops are rich in flavor and can be cooked in many ways. Whether you choose bone-in or boneless, grilled or pan-fried, pork chops are great for a weeknight meal or a special dinner. They pair wonderfully with apple sauce, caramelized onions, or mustard-based sauces. Tender and juicy when cooked properly, pork chops can be seasoned with herbs like sage or rosemary." },
+  { id: 151, imageUrl: "/bacon.png", title: "Bacon", price: "$7.49", category: "Beef", description: "Bacon: A fan-favorite for its crispiness and savory flavor, bacon is perfect for breakfast, as a snack, or as a topping for various dishes. Its smoky aroma and rich taste can elevate salads, burgers, and pastas. Bacon can be cooked to your desired crispiness, and is delicious when combined with eggs, avocado, or in a classic BLT sandwich." },
+  { id: 153, imageUrl: "/lamb_rack.png", title: "Lamb Rack", price: "$15.99", category: "Beef", description: "Lamb Rack: A luxurious and flavorful cut of meat, lamb rack is a tender and juicy option that is perfect for roasting. Known for its rich and slightly gamey flavor, it is often seasoned with rosemary, garlic, and thyme. This cut is perfect for special occasions or an elegant dinner party. Serve with mashed potatoes, mint jelly, or roasted vegetables for a well-rounded meal." },
+  { id: 155, imageUrl: "/ground_beef.png", title: "Ground Beef", price: "$4.99", category: "Beef", description: "Ground Beef: Ground beef is a versatile ingredient that can be used in a variety of dishes, including burgers, tacos, spaghetti sauces, and meatloaf. Its rich flavor makes it a staple in many households. Depending on the fat content, it can range from lean to fatty, so you can choose the perfect ground beef for your recipes. It can be seasoned with a wide variety of herbs and spices to suit your taste." },
+  { id: 159, imageUrl: "/sausage.png", title: "Sausage", price: "$3.99", category: "Beef", description: "Sausage: Sausages are flavorful and juicy, made with ground meat and a variety of spices. Whether made from beef, pork, or a blend, sausages come in different flavors such as spicy, sweet, or smoky. Grilled, pan-fried, or added to casseroles, sausages are perfect for breakfast, lunch, or dinner. They pair well with peppers, onions, or sauerkraut for a hearty meal." },
 
   // Fish and Seafood
-  { id: 145, imageUrl: "/salmon_fillet.png", title: "Salmon Fillet", price: "$8.49", category: "Seafood" },
-  { id: 147, imageUrl: "/shrimp.png", title: "Shrimp", price: "$14.99", category: "Seafood" },
-  { id: 148, imageUrl: "/lobster.png", title: "Lobster", price: "$29.99", category: "Seafood" },
-  { id: 150, imageUrl: "/crab.png", title: "Crab", price: "$21.99", category: "Seafood" },
-  { id: 152, imageUrl: "/tilapia.png", title: "Tilapia", price: "$5.29", category: "Seafood" },
-  { id: 154, imageUrl: "/tuna_steak.png", title: "Tuna Steak", price: "$10.49", category: "Seafood" },
-  { id: 156, imageUrl: "/scallops.png", title: "Scallops", price: "$18.99", category: "Seafood" },
-  { id: 158, imageUrl: "/cod_fillet.png", title: "Cod Fillet", price: "$7.99", category: "Seafood" },
-  { id: 160, imageUrl: "/clams.png", title: "Clams", price: "$9.99", category: "Seafood" },
-  { id: 161, imageUrl: "/oysters.png", title: "Oysters", price: "$19.99", category: "Seafood" },
-  { id: 162, imageUrl: "/king_crab.png", title: "King Crab", price: "$39.99", category: "Seafood" }
+  { id: 145, imageUrl: "/salmon_fillet.png", title: "Salmon Fillet", price: "$8.49", category: "Seafood", description: "Salmon Fillet: Known for its rich, buttery flavor and firm texture, salmon fillet is a popular choice for seafood lovers. Rich in omega-3 fatty acids, it’s not only tasty but also offers numerous health benefits. Salmon can be grilled, baked, or pan-seared and pairs wonderfully with lemon, dill, or a simple garlic butter sauce. It's perfect for a healthy dinner or as a main dish for a family meal." },
+  { id: 147, imageUrl: "/shrimp.png", title: "Shrimp", price: "$14.99", category: "Seafood", description: "Shrimp: Shrimp are small, tender, and sweet-tasting shellfish that cook quickly, making them ideal for stir-fries, salads, or as a main dish. High in protein and low in fat, they are a popular option for those looking for a light but satisfying meal. Shrimp can be seasoned with various spices like garlic, paprika, or lemon, and are delicious in pasta dishes, tacos, or on skewers." },
+  { id: 148, imageUrl: "/lobster.png", title: "Lobster", price: "$29.99", category: "Seafood", description: "Lobster: A delicacy often reserved for special occasions, lobster is known for its sweet, succulent meat. With its tender texture and rich flavor, lobster is best enjoyed steamed or boiled and paired with melted butter. A luxurious treat, it’s perfect for a romantic dinner, a celebration, or a fancy seafood feast. It can be served with side dishes like roasted vegetables or a fresh salad." },
+  { id: 150, imageUrl: "/crab.png", title: "Crab", price: "$21.99", category: "Seafood", description: "Crab: Crab is a delicate seafood with sweet and tender meat. It’s perfect for cracking open and dipping in butter or enjoying in dishes like crab cakes, crab bisque, or a seafood salad. Available in various forms such as whole, legs, or claws, crab can be served hot or cold. Its sweet, mild flavor makes it a versatile seafood option that pairs well with lemon or Old Bay seasoning." },
+  { id: 152, imageUrl: "/tilapia.png", title: "Tilapia", price: "$5.29", category: "Seafood", description: "Tilapia: A mild-flavored fish, tilapia is known for its light, flaky texture. It's a versatile fish that can be baked, grilled, or fried. Tilapia is an affordable and healthy protein option for weeknight dinners. It pairs well with a variety of spices and is often served with a squeeze of lemon or a tangy tomato-based sauce. Its neutral flavor allows it to be paired with a variety of side dishes." },
+  { id: 154, imageUrl: "/tuna_steak.png", title: "Tuna Steak", price: "$10.49", category: "Seafood", description: "Tuna Steak: Tuna steak is a lean, protein-packed option that is perfect for grilling, searing, or even eating raw in sushi. Known for its meaty texture and bold flavor, it’s a great choice for seafood lovers looking for something filling and satisfying. Tuna steak can be served with a variety of sides such as grilled vegetables or a fresh salad, and is often seasoned with sesame seeds or soy sauce." },
+  { id: 156, imageUrl: "/scallops.png", title: "Scallops", price: "$18.99", category: "Seafood", description: "Scallops: Scallops are delicate shellfish known for their sweet, tender meat. Often pan-seared or grilled, they have a soft texture that can be enhanced with simple seasonings like garlic, butter, or lemon. Scallops are perfect for gourmet dishes, served alongside pasta, risotto, or as an appetizer. Their subtle flavor makes them a favorite in high-end seafood restaurants." },
+  { id: 158, imageUrl: "/cod_fillet.png", title: "Cod Fillet", price: "$7.99", category: "Seafood", description: "Cod Fillet: Cod is a white, flaky fish with a mild flavor, often used in fish and chips or served with a variety of sauces. Known for its light texture, it cooks quickly and is great for pan-searing or baking. Cod pairs well with tartar sauce, a squeeze of lemon, or even a spicy salsa for a bit of heat. It’s an affordable, versatile fish that can be prepared in many ways." }
 ];
