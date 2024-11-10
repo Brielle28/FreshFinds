@@ -1,64 +1,5 @@
-// // src/Pages/Section.js
-// import { useContext } from "react";
-// import { useParams, Link } from "react-router-dom";
-// import CartItemCard from "../Components/CartItems/CartItemCard";
-// import { UserContext } from "../Components/Context/UserProvider";
-// import { categories } from '../Utils/categories';
-
-// // Import items data for each section
-// import { BeveragesItems } from "../Utils/BeveragesItem";
-// import { BakeryItems } from "../Utils/BakeryItem";
-// import { DairyProductsItems } from "../Utils/DairyProductsItems";
-// import { FrozenFoodItems } from "../Utils/FrozenFoodsItems";
-// import { FruitsAndVegetablesItem } from "../Utils/FruitsAndVegetablesItem";
-// import { MeatAndSeafoodItems } from "../Utils/MeatAndSeafoodItems";
-// import { PopularItems } from "../Utils/PopularItems";
-
-// // Map to link section names to their item arrays
-// const itemsMap = {
-//     beverages: BeveragesItems,
-//     fruitsandvegetables: FruitsAndVegetablesItem,
-//     meatandseafood: MeatAndSeafoodItems,
-//     dairyproducts: DairyProductsItems,
-//     bakery: BakeryItems,
-//     frozenfoods: FrozenFoodItems,
-//     PopularItems: PopularItems,
-// };
-
-// const Section = () => {
-//     const { sectionName } = useParams();
-//     // const items = itemsMap[sectionName.toLowerCase()] || [];
-
-//     const { likeArray, setLikeArray, cartItems, addToCart } = useContext(UserContext);
-//     const category = categories.find((cat) => cat.sectionName === sectionName);
-//     const items = category?.links ? itemsMap[category.sectionName.toLowerCase()] : [];
-//     if (!items.length) return <div>Section not found or no items available</div>;
-
-//     return (
-//         <div className="grid grid-cols-2 gap-2 pt-[100px] md:grid-cols-3 lg:grid-cols-4 w-[95%] md:w-[90%] md:gap-7 lg:w-[80%]">
-//             {items.map((item) => (
-//                 <Link to={`/item/${item.id}`} key={item.id}>
-//                     <CartItemCard
-//                         item={item}
-//                         imageUrl={item.imageUrl}
-//                         title={item.title}
-//                         price={item.price}
-//                         likeArray={likeArray}
-//                         setLikeArray={setLikeArray}
-//                         cartItems={cartItems}
-//                         addToCart={addToCart}
-//                     />
-//                 </Link>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default Section;
-
-
 import { useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CartItemCard from "../Components/CartItems/CartItemCard";
 import { UserContext } from "../Components/Context/UserProvider";
 import { categories } from '../Utils/categories';
@@ -126,6 +67,7 @@ const Section = () => {
                             <CartItemCard
                                 key={item.id}
                                 item={item}
+                                sectionName={sectionName}
                                 imageUrl={item.imageUrl}
                                 title={item.title}
                                 price={item.price}

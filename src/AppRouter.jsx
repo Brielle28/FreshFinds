@@ -36,9 +36,10 @@ const routing = createBrowserRouter([
     element: <Section />,
   },
   {
-    path: "/item/:id",
+    path: "/:sectionName/:id",
     element: <ItemDetails />,
   },
+  
 ]);
 
 const AppRouter = () => {

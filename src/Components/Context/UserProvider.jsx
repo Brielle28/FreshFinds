@@ -3,8 +3,8 @@ import React, { createContext, useState, useEffect } from "react";
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [likeArray, setLikeArray] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+  const [likeArray, setLikeArray] = useState([]); // for the items that are liked 
+  const [cartItems, setCartItems] = useState([]); // for all the items in cart 
 
   // Load from localStorage on mount
   useEffect(() => {
