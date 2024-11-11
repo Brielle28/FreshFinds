@@ -54,3 +54,61 @@ const CartItemCard = ({
 };
 
 export default CartItemCard;
+
+// import React from 'react';
+// import AddToCart from "./AddToCart";
+// import CartItemLike from "./CartItemLike";
+// import { Link } from "react-router-dom";
+
+// const CartItemCard = ({
+//   imageUrl,
+//   title,
+//   price,
+//   item,
+//   likeArray,
+//   setLikeArray,
+//   cartItems,
+//   addToCart,
+//   sectionName
+// }) => {
+//   const itemInCart = cartItems?.find(cartItem => cartItem.id === item.id);
+
+//   return (
+//     <div className="w-full my-5 bg-white h-96">
+//       <div className="flex flex-col items-start justify-between bg-white p-2 shadow-2xl rounded-[15px] w-full h-full">
+//         <div className="relative flex items-center justify-center bg-[#C9EAD3] rounded-t-[15px] w-full h-52">
+//           <CartItemLike
+//             item={item}
+//             likeArray={likeArray}
+//             setLikeArray={setLikeArray}
+//           />
+//           <Link to={`/${sectionName}/${item.id}`} className="flex items-center justify-center w-full">
+//             <div
+//               className="w-32 h-32 bg-center bg-no-repeat bg-contain md:h-40 md:w-40"
+//               style={{ backgroundImage: `url(${imageUrl})` }}
+//             />
+//           </Link>
+//         </div>
+        
+//         <Link to={`/${sectionName}/${item.id}`} className="flex-1 w-full">
+//           <div className="flex flex-col items-start justify-start w-full h-24 py-2">
+//             <h4 className="font-extrabold text-[20px] line-clamp-2">{title}</h4>
+//             <h3 className="text-green-500 font-bold text-[13px] mt-2">
+//               {price} <span className="text-black font-light text-[10px]">/KG</span>
+//             </h3>
+//           </div>
+//         </Link>
+        
+//         <div className="w-full">
+//           <AddToCart
+//             item={item}
+//             itemInCart={itemInCart}
+//             addToCart={addToCart}
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default CartItemCard;
