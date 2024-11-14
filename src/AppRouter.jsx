@@ -8,6 +8,7 @@ import ItemsInCart from "./Pages/ItemsInCart";
 import CheckOut from "./Pages/CheckOut";
 import Section from "./Pages/Section";
 import ItemDetails from "./Pages/ItemDetails"; // Ensure this is imported
+import OrderSuccess from "./Pages/OrderSuccess";
 
 // Define routes
 const routing = createBrowserRouter([
@@ -30,6 +31,10 @@ const routing = createBrowserRouter([
   {
     path: "/CheckOut",
     element: <CheckOut />,
+  },
+  {
+    path: "/OrderSuccess",
+    element: <OrderSuccess />,
   },
   {
     path: "/section/:sectionName",

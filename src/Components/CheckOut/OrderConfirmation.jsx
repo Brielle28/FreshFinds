@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserContext } from "../Context/UserProvider";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const OrderConfirmation = () => {
   const { handlePreviousStep, paymentFormData, formData } = useContext(UserContext);
@@ -116,9 +117,12 @@ const OrderConfirmation = () => {
             </button>
           </div>
           <div className="w-[48%] flex items-start justify-start">
-            <button className="flex items-center justify-center py-2 px-7 font-bold text-white bg-green-500 rounded-[7px] w-[30%]">
-              Order
-            </button>
+            <Link to='/OrderSuccess' className="w-full">
+              <button className="flex items-center justify-center py-2 px-7 font-bold text-white bg-green-500 rounded-[7px] w-[30%]">
+                Order
+              </button>
+            </Link>
+
           </div>
         </div>
 
@@ -131,7 +135,9 @@ const OrderConfirmation = () => {
             <HiOutlineArrowNarrowLeft /> Previous
           </button>
           <button className="py-2 px-7 font-bold text-white bg-green-500 rounded-[7px] w-[45%]">
-            Order
+            <Link to='/OrderSuccess' className="w-full">
+              Order
+            </Link>
           </button>
         </div>
       </div>
