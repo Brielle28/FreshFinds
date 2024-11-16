@@ -53,7 +53,7 @@ const OrderSuccess = () => {
                         </button>
                     </Link>
                 </div>
-                <div className="mt-6">
+                <div className="mt-14 md:mt-6 ">
                     <lord-icon
                         src="https://cdn.lordicon.com/hsrrkevt.json"
                         trigger="loop"

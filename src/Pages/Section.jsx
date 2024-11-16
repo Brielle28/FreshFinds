@@ -47,7 +47,7 @@ const Section = () => {
     return (
         <>
             <Layout>
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center bg-white">
                     <div className="w-full flex flex-col items-center justify-center bg-[#d7f3d0] py-6 px-4 md:py-10 md:px-20">
                         <div className="flex items-center justify-between w-full">
                             {/* Back arrow */}
