@@ -60,7 +60,7 @@ const ItemDetails = () => {
   const totalPrice = (itemPrice * (item.quantity || 0)).toFixed(2);
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <div className="flex flex-col items-center justify-center">
         <div className="bg-[#CEEBD7] w-full flex flex-col items-center justify-center">
           <div className="flex items-center justify-between w-full px-4 pt-5 sm:px-6 md:px-10 sm:pt-7">
@@ -78,7 +78,7 @@ const ItemDetails = () => {
           />
         </div>
 
-        <div className="flex flex-col items-start justify-center gap-0 px-4 sm:px-5">
+        <div className="flex flex-col items-start justify-center gap-0 px-4 bg-white sm:px-5">
           <h1 className="mt-4 text-[28px] sm:text-[35px] font-bold">{item.title}</h1>
           <div className="flex items-center justify-between w-full mt-2 sm:mt-4">
             <p className="font-bold text-green-500 text-[20px] sm:text-[24px]">

@@ -62,7 +62,7 @@ const Section = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 pt-[10px] md:grid-cols-3 lg:grid-cols-4 w-[95%] md:w-[90%] md:gap-7 lg:w-[80%]">
+                    <div className="grid grid-cols-2 gap-2 bg-white pt-[10px] md:grid-cols-3 lg:grid-cols-4 w-[95%] md:w-[90%] md:gap-7 lg:w-[80%]">
                         {items.map((item) => (
                             <CartItemCard
                                 key={item.id}

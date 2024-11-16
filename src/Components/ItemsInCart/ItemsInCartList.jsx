@@ -9,7 +9,8 @@ const ItemsInCartList = () => {
   console.log(cartItems, "from items in cart");
 
   return (
-    <div className=" flex flex-col items-center justify-center mx-auto pt-[2px] px-4 sm:px-8 lg:px-16">
+    <div className=" flex flex-col items-center justify-center mx-auto pt-[3
+    px] px-4 sm:px-8 lg:px-16 bg-white">
       {cartItems.length > 0 ? (
         <div className="grid items-center justify-center grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {cartItems.map((item) => (

@@ -106,7 +106,7 @@ const LikedItems = () => {
   );
 
   return (
-    <div className="flex flex-col items-center justify-center w-full px-4 md:py-10 md:px-20">
+    <div className="flex flex-col items-center justify-center w-full px-4 bg-white md:py-10 md:px-20">
       {likedItemsWithDetails.length > 0 ? (
         <div className="grid items-center justify-center grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-5">
           {likedItemsWithDetails.map((item) => (
@@ -129,8 +129,10 @@ const LikedItems = () => {
           ))}
         </div>
       ) : (
+        <div className="w-full bg-white"> 
         <div className="w-[80%] h-[300px] flex items-center justify-center bg-[#d7f3d0] my-10">
           <p className="font-bold text-[20px]">No liked items</p>
+        </div>
         </div>
       )}
     </div>

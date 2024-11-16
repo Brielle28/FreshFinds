@@ -51,7 +51,7 @@ const Carousel = () => {
                                 <h6 className="w-full font-bold leading-7 text-center md:text-3xl sm:w-4/5 sm:text-4xl sm:leading-10 text-blue-950 md:text-left">
                                     {slide.title}
                                 </h6>
-                                <div className="px-3 mt-2 md:mt-5 font-semibold transition-colors btn text-black hover:text-white hover:bg-[#6ddb51]">
+                                <div className="px-3 mt-2 md:mt-5 font-semibold transition-colors btn text-black hover:text-white bg-white hover:bg-[#6ddb51]">
                                     Order Now
                                 </div>
                             </div>
