@@ -6,21 +6,27 @@ Welcome to **Fresh Finds**, an e-commerce platform specializing in fresh fruits,
 
 ## Table of Contents
 1. [Project Description](#project-description)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Setup and Installation](#setup-and-installation)
-5. [Usage Guide](#usage-guide)
-6. [Folder Structure](#folder-structure)
-7. [Key Components](#key-components)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Contact](#contact)
+2. [Demo](#demo)
+3. [Features](#features)
+4. [Tech Stack](#tech-stack)
+5. [Setup and Installation](#setup-and-installation)
+6. [Usage Guide](#usage-guide)
+7. [Folder Structure](#folder-structure)
+8. [Key Components](#key-components)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
 
 ---
 
 ## Project Description
 
 Fresh Finds is a responsive e-commerce application designed to make grocery shopping easy and enjoyable. The platform organizes items into categories like **Fruits and Vegetables**, **Dairy Products**, **Meat and Seafood**, and more. With a user-friendly interface and functionalities like liking products, adding them to a cart, and viewing product details, Fresh Finds aims to enhance the online grocery shopping experience.
+
+---
+
+## Demo
+https://github.com/user-attachments/assets/3efb5294-baa5-44c6-a020-47103766b504
 
 ---
 
