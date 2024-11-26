@@ -38,28 +38,7 @@ const TimerHome = () => {
         </p>
       </div>
     </div>
-    // <div className="w-full h-screen flex flex-col items-center justify-center bg-[#019934] ">
-    //   <div
-    //     className="w-40 h-40 bg-center bg-no-repeat bg-contain sm:w-64 sm:h-64 animate-slideInBounce"
-    //     style={{ backgroundImage: "url('/fruit1.png')" }}
-    //   ></div>
-
-    //   <p className="text-[28px] sm:text-[35px] lg:text-[45px] text-white font-semibold mt-4 sm:mt-6 animate-slideInUp">
-    //     Fresh Find
-    //   </p>
-    // </div>
   );
 };
 
 export default TimerHome;
-
-
-
-
-  // const handleNextStep = () => {
-  //   setCurrentStep((prevStep) => prevStep + 1);
-  // };
-
-  // const handlePreviousStep = () => {
-  //   setCurrentStep((prevStep) => prevStep - 1);
-  // };

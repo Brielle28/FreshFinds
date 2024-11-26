@@ -8,7 +8,6 @@ const ItemsInCart = () => {
         <div className="h-screen bg-white">
           <ItemsInCartHeader />
           <ItemsInCartList />
-          {/* <Footer /> */}
         </div>
       </Layout>
     </>

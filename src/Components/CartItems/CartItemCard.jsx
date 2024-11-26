@@ -27,7 +27,7 @@ const CartItemCard = ({
           />
           {/* Link only wraps the image and text content */}
 
-          <Link to={`/${sectionName}/${item.id}`} className="w-full">
+          <Link to={`/${sectionName}/${item.id}`} className="flex items-center justify-center w-full">
             <div
               className="w-32 h-32 bg-center bg-no-repeat bg-contain mx-h-auto md:h-40 md:w-40"
               style={{ backgroundImage: `url(${imageUrl})` }}
