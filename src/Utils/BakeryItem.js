@@ -224,15 +224,15 @@ export const BakeryItems = [
     description:
       "Ready-to-use pie crust made with premium ingredients including real butter for perfect flakiness. Our crusts are rolled to the ideal thickness and sized to fit standard 9-inch pie plates. The dough is formulated to bake up flaky and tender while maintaining its structure for both sweet and savory fillings. Each package contains two crusts, individually wrapped and ready to use. Perfect for both novice and experienced bakers seeking convenience without sacrificing quality.",
   },
-  {
-    id: 26,
-    imageUrl: "/puff_pastry.png",
-    title: "Puff Pastry",
-    price: "$4.99",
-    category: "Baking Ingredients",
-    description:
-      "Puff Pastry is a light, flaky, and buttery dough used in both sweet and savory pastries. Made with multiple layers of dough and butter folded and rolled repeatedly, it creates a deliciously airy texture when baked. Perfect for creating appetizers, pies, pastries, and tarts, puff pastry can be used to make treats like cheese twists, Danish pastries, and croissants. Its versatility and delightful flavor make it a favorite ingredient for both home cooks and professional bakers.",
-  },
+  // {
+  //   id: 26,
+  //   imageUrl: "/puff_pastry.png",
+  //   title: "Puff Pastry",
+  //   price: "$4.99",
+  //   category: "Baking Ingredients",
+  //   description:
+  //     "Puff Pastry is a light, flaky, and buttery dough used in both sweet and savory pastries. Made with multiple layers of dough and butter folded and rolled repeatedly, it creates a deliciously airy texture when baked. Perfect for creating appetizers, pies, pastries, and tarts, puff pastry can be used to make treats like cheese twists, Danish pastries, and croissants. Its versatility and delightful flavor make it a favorite ingredient for both home cooks and professional bakers.",
+  // },
   {
     id: 27,
     imageUrl: "/cinnamon.png",
