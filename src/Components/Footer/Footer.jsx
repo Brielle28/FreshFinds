@@ -106,13 +106,15 @@ const Footer = () => {
           transition-colors
         `}
       >
-        <FiShoppingCart className="text-lg sm:text-xl md:text-2xl lg:text-[30px]" />
+        <div className="relative">
+          <FiShoppingCart className="text-lg sm:text-xl md:text-2xl lg:text-[30px]" />
+          {cartItems.length > 0 && (
+            <span className="absolute flex items-center justify-center min-w-[1.25rem] h-5 px-1.5 text-[10px] sm:text-xs text-white bg-red-500 rounded-full -top-2 -right-2 sm:-top-2.5 sm:-right-2.5">
+              <span className="font-extrabold">{cartItems.length}</span>
+            </span>
+          )}
+        </div>
         <h3 className="text-[10px] sm:text-xs md:text-sm lg:text-[18px] font-light mt-0.5 sm:mt-1">Cart</h3>
-        {cartItems.length > 0 && (
-          <span className="absolute flex items-center justify-center min-w-[1.25rem] h-5 px-1.5 text-[10px] sm:text-xs text-white bg-red-500 rounded-full -top-1 sm:-top-0.5 -right-1 sm:-right-0.5 md:-top-2 md:-right-2">
-            <span className="font-extrabold">{cartItems.length}</span>
-          </span>
-        )}
       </NavLink>
 
       <div className="flex flex-col items-center justify-center px-1 sm:px-2 py-2 sm:py-3 md:py-4 flex-1">
