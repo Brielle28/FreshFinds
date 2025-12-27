@@ -7,138 +7,117 @@ const OrderConfirmation = () => {
   const { handlePreviousStep, paymentFormData, formData } = useContext(UserContext);
 
   return (
-    <div className="flex flex-col items-center justify-center md:items-start md:justify-start w-full px-5 bg-white rounded-lg md:w-[100%] lg:w-[100%]">
-      <h2 className="mt-4 text-lg font-bold text-black sm:text-[11px] md:text-xl lg:text-2xl">
+    <div className="flex flex-col items-center justify-center md:items-start md:justify-start w-full px-3 sm:px-4 md:px-5 lg:px-6 bg-white rounded-lg">
+      <h2 className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-black">
         Order Confirmation
       </h2>
-      <div className="flex flex-col items-start justify-start w-full gap-4 mt-3 ml-5 md:ml-0">
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+      <div className="flex flex-col items-start justify-start w-full gap-3 sm:gap-4 mt-3 sm:mt-4">
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               First Name
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">{formData.firstName}</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">{formData.firstName}</p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               Last Name
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {formData.lastName}
             </p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">Email</p>
-            <p className="text-black text-[11px] md:text-[14px]">
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">Email</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {formData.email}
             </p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">Address</p>
-            <p className="text-black text-[11px] md:text-[14px]">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">Address</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {formData.streetAddress}
             </p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">State</p>
-            <p className="text-black text-[11px] md:text-[14px]">{formData.state}</p>
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">State</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">{formData.state}</p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">City</p>
-            <p className="text-black text-[11px] md:text-[14px]">{formData.city}</p>
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">City</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">{formData.city}</p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">Zip Code</p>
-            <p className="text-black text-[11px] md:text-[14px]">{formData.zipCode}</p>
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">Zip Code</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">{formData.zipCode}</p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               Phone Number
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">{formData.phoneNumber}</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">{formData.phoneNumber}</p>
           </div>
         </div>
 
-        <hr className="w-full h-1 my-2 text-black" />
+        <hr className="w-full h-px sm:h-0.5 md:h-1 my-3 sm:my-4 bg-gray-300" />
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               Card Number
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {paymentFormData.cardNumber}
             </p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               Expiration Date
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {paymentFormData.expirationDate}
-
             </p>
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">
+        <div className="flex flex-col sm:flex-row items-start justify-between w-full gap-3 sm:gap-4">
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">
               Name on Card
             </p>
-            <p className="text-black text-[11px] md:text-[14px]">
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words">
               {paymentFormData.cardName}
-
             </p>
           </div>
-          <div className="flex flex-col items-start justify-start gap-1 w-[48%]">
-            <p className="text-gray-400 text-[11px] md:text-[14px]">CVC</p>
-            <p className="text-black text-[11px] md:text-[14px]"> {paymentFormData.cvv} </p>
+          <div className="flex flex-col items-start justify-start gap-1 w-full sm:w-[48%]">
+            <p className="text-gray-400 text-xs sm:text-sm md:text-[14px]">CVC</p>
+            <p className="text-black text-xs sm:text-sm md:text-[14px] break-words"> {paymentFormData.cvv} </p>
           </div>
         </div>
 
-        {/* buttons for big screen */}
-        <div className="items-center justify-between hidden w-full mt-4 md:flex">
-          <div className="w-[48%] flex items-start justify-start">
-            <button
-              onClick={handlePreviousStep}
-              className="flex items-center justify-center bg-gray-300 p-2 rounded-[5px] text-white w-[30%]"
-            >
-              <HiOutlineArrowNarrowLeft /> Previous
-            </button>
-          </div>
-          <div className="w-[48%] flex items-start justify-start">
-            <Link to='/OrderSuccess' className="w-full">
-              <button className="flex items-center justify-center py-2 px-7 font-bold text-white bg-green-500 rounded-[7px] w-[30%]">
-                Order
-              </button>
-            </Link>
-
-          </div>
-        </div>
-
-        {/* buttons for small screens */}
-        <div className="flex items-center justify-between w-full mt-4 md:hidden">
+        {/* buttons */}
+        <div className="flex items-center justify-between w-full gap-3 sm:gap-4 mt-4 sm:mt-5">
           <button
             onClick={handlePreviousStep}
-            className="flex items-center justify-center bg-gray-300 p-2 rounded-[5px] text-white w-[45%]"
+            className="flex items-center justify-center gap-1 sm:gap-2 bg-gray-300 px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-lg hover:bg-gray-400 transition-colors text-xs sm:text-sm md:text-base font-semibold text-black w-[45%] sm:w-[30%]"
           >
-            <HiOutlineArrowNarrowLeft /> Previous
+            <HiOutlineArrowNarrowLeft className="text-sm sm:text-base" /> 
+            <span>Previous</span>
           </button>
-          <button className="py-2 px-7 font-bold text-white bg-green-500 rounded-[7px] w-[45%]">
-            <Link to='/OrderSuccess' className="w-full">
+          <Link to='/OrderSuccess' className="w-[45%] sm:w-[30%]">
+            <button className="flex items-center justify-center w-full px-3 sm:px-4 md:px-7 py-2 sm:py-2.5 font-bold text-xs sm:text-sm md:text-base text-white bg-green-500 rounded-lg sm:rounded-[7px] hover:bg-green-600 transition-colors">
               Order
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

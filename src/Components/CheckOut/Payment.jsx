@@ -48,12 +48,12 @@ const Payment = () => {
   };
 console.log(paymentFormData, "this is payment form data")
   return (
-    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px] ">
-      <h2 className="text-black font-bold text-[20px] sm:text-[25px]">
+    <div className="flex flex-col items-start px-3 sm:px-5 md:px-8 lg:px-10 pt-4 sm:pt-5 justify-center bg-white rounded-lg sm:rounded-[7px]">
+      <h2 className="text-black font-bold text-lg sm:text-xl md:text-2xl lg:text-[25px]">
         Payment Method
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-[93%] mt-5">
+      <form onSubmit={handleSubmit} className="w-full sm:w-[95%] md:w-[93%] mt-4 sm:mt-5">
         {/* Card Number */}
         <div className="flex flex-col items-start justify-center w-full gap-1">
           <h1 className="font-semibold">Card Number</h1>
@@ -160,33 +160,19 @@ console.log(paymentFormData, "this is payment form data")
           )}
         </div>
         {/* buttons */}
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full gap-3 sm:gap-4">
           <button
             onClick={handlePreviousStep}
-            className="hidden md:flex items-center justify-start gap-1 px-4 py-2 mt-5 mb-5 text-white transition duration-300 md:w-[30%] bg-gray-300 rounded-lg"
+            className="flex items-center justify-center sm:justify-start gap-1 sm:gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 mt-5 mb-5 text-sm sm:text-base text-black transition duration-300 md:w-[30%] bg-gray-300 rounded-lg hover:bg-gray-400 font-semibold"
           >
-            <HiOutlineArrowNarrowLeft className="text-black" />
-            <h1 className="text-black">Previous</h1>
-          </button>
-          {/* previous button for small screen */}
-          <button
-            onClick={handlePreviousStep}
-            className="flex md:hidden items-center justify-start mt-5 mb-5 text-white transition duration-300 md:w-[30%] bg-transparent rounded-lg"
-          >
-            <HiArrowCircleLeft className="text-black" size={25} />
+            <HiOutlineArrowNarrowLeft className="text-black text-base sm:text-lg" />
+            <span className="hidden sm:inline">Previous</span>
           </button>
           <button
             type="submit"
-            className="hidden md:flex w-full px-4 py-2 mt-5 mb-5 text-white transition duration-300 md:w-[30%] bg-green-500 rounded-lg hover:bg-green-600"
+            className="flex-1 sm:flex-none md:w-[30%] px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 mt-5 mb-5 text-sm sm:text-base md:text-lg text-white transition duration-300 bg-green-500 rounded-lg hover:bg-green-600 font-semibold"
           >
             Next
-          </button>
-          {/* next button for small screen */}
-          <button
-            type="submit"
-            className="flex mt-5 mb-5 text-white transition duration-300 md:hidden"
-          >
-            <HiArrowCircleRight size={25}  className="text-green-500"/>
           </button>
         </div>
       </form>

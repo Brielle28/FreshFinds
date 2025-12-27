@@ -56,12 +56,12 @@ const PersonalInfo = () => {
 
   console.log(formData,"from personal info")
   return (
-    <div className="flex flex-col items-start px-5 sm:px-10 pt-5 justify-center bg-white rounded-[7px]">
-      <h2 className="text-black font-bold text-[20px] sm:text-[25px]">
+    <div className="flex flex-col items-start px-3 sm:px-5 md:px-8 lg:px-10 pt-4 sm:pt-5 justify-center bg-white rounded-lg sm:rounded-[7px]">
+      <h2 className="text-black font-bold text-lg sm:text-xl md:text-2xl lg:text-[25px]">
         Personal Info
       </h2>
 
-      <form onSubmit={handleSubmit} className="w-[90%] mt-5">
+      <form onSubmit={handleSubmit} className="w-full sm:w-[95%] md:w-[90%] mt-4 sm:mt-5">
         {/* First Name */}
         <div className="flex flex-col items-start justify-center w-full gap-1">
           <h1 className="font-semibold">First Name</h1>
@@ -301,8 +301,7 @@ const PersonalInfo = () => {
         <div className="flex items-center justify-center w-full md:items-end md:justify-end">
           <button
             type="submit"
-            // onClick={handleNext}
-            className="w-full px-4 py-2 mt-5 mb-5 text-white transition duration-300 md:w-[30%] bg-green-500 rounded-lg hover:bg-green-600"
+            className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2 sm:py-2.5 md:py-3 mt-5 mb-5 text-sm sm:text-base md:text-lg text-white transition duration-300 md:w-[30%] bg-green-500 rounded-lg hover:bg-green-600 font-semibold"
           >
             Next
           </button>

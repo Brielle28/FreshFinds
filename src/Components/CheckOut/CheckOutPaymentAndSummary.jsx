@@ -3,11 +3,11 @@ import Payment from "./Payment";
 
 const CheckOutPaymentAndSummary = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row md:items-start items-center justify-center w-[100%] mt-20 gap-[10px] md:gap-0 lg:gap-0">
-      <div className=" md:w-[46%]">
+    <div className="flex flex-col-reverse md:flex-row md:items-start items-center justify-center w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 mt-24 sm:mt-28 md:mt-32 gap-4 sm:gap-6 md:gap-8 lg:gap-10 pb-20 sm:pb-24 md:pb-28">
+      <div className="w-full md:w-[48%] lg:w-[46%]">
         <Payment />
       </div>
-      <div className=" md:w-[35%]">
+      <div className="w-full md:w-[48%] lg:w-[35%]">
         <OrderSummary />
       </div>
     </div>

@@ -47,22 +47,22 @@ const Section = () => {
     return (
         <>
             <Layout>
-                <div className="flex flex-col items-center justify-center bg-white">
-                    <div className="w-full flex flex-col items-center justify-center bg-[#d7f3d0] py-6 px-4 md:py-10 md:px-20">
-                        <div className="flex items-center justify-between w-full">
+                <div className="flex flex-col items-center justify-center bg-white pb-20 sm:pb-24 md:pb-28">
+                    <div className="w-full flex flex-col items-center justify-center bg-[#d7f3d0] py-4 sm:py-5 md:py-6 lg:py-8 px-3 sm:px-4 md:px-6 lg:px-10 xl:px-20">
+                        <div className="flex items-center justify-between w-full max-w-7xl">
                             {/* Back arrow */}
-                            <div className="flex items-center justify-center p-2 bg-white rounded-full">
-                                <IoIosArrowBack className="text-black" size={17} onClick={() => navigate(-1)} />
-                            </div>
+                            <button className="flex items-center justify-center p-1.5 sm:p-2 bg-white rounded-full hover:bg-gray-50 transition-colors">
+                                <IoIosArrowBack className="text-black text-sm sm:text-base" size={17} onClick={() => navigate(-1)} />
+                            </button>
                             {/* category */}
-                            <h1 className="text-sm font-semibold text-black md:text-base"> {displayName} </h1>
+                            <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-black text-center px-2"> {displayName} </h1>
                             {/* Notifications icon */}
-                            <div className="flex items-center justify-center p-2 bg-white rounded-full">
-                                <IoNotificationsOutline className="text-black" size={17} />
-                            </div>
+                            <button className="flex items-center justify-center p-1.5 sm:p-2 bg-white rounded-full hover:bg-gray-50 transition-colors">
+                                <IoNotificationsOutline className="text-black text-sm sm:text-base" size={17} />
+                            </button>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 bg-white pt-[10px] md:grid-cols-3 lg:grid-cols-4 w-[95%] md:w-[90%] md:gap-7 lg:w-[80%]">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 bg-white pt-4 sm:pt-6 md:pt-8 w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
                         {items.map((item) => (
                             <CartItemCard
                                 key={item.id}

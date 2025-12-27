@@ -12,7 +12,7 @@ const CheckOut = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center w-full gap-0 bg-white">
+      <div className="flex flex-col items-center justify-center w-full gap-0 bg-white min-h-screen">
           <CheckOutHeader />
           <CheckoutSteps />
         <div className="flex items-center justify-center w-full">

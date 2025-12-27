@@ -60,68 +60,113 @@ const ItemDetails = () => {
   const totalPrice = (itemPrice * (item.quantity || 0)).toFixed(2);
 
   return (
-    <div className="w-full bg-white">
-      <div className="flex flex-col items-center justify-center">
-        <div className="bg-[#CEEBD7] w-full flex flex-col items-center justify-center">
-          <div className="flex items-center justify-between w-full px-4 pt-5 sm:px-6 md:px-10 sm:pt-7">
-            <div className="flex items-center justify-center p-2 bg-white rounded-full">
-              <IoIosArrowBack className="text-green-500" size={17} onClick={() => navigate(-1)} />
-            </div>
-            <h1 className="text-[16px] sm:text-[20px]">Details</h1>
-            <div className="flex items-center justify-center p-2 bg-white rounded-full">
-              <IoNotificationsOutline className="text-green-500" size={17} />
-            </div>
-          </div>
-          <div
-            className="mx-auto mt-4 mb-5 bg-center bg-no-repeat bg-contain sm:mt-5 h-44 sm:h-52 w-44 sm:w-52 sm:mb-7"
-            style={{ backgroundImage: `url(${item.imageUrl})` }}
-          />
-        </div>
-
-        <div className="flex flex-col items-start justify-center gap-0 px-4 bg-white sm:px-5">
-          <h1 className="mt-4 text-[28px] sm:text-[35px] font-bold">{item.title}</h1>
-          <div className="flex items-center justify-between w-full mt-2 sm:mt-4">
-            <p className="font-bold text-green-500 text-[20px] sm:text-[24px]">
-              {item.price} <span className="font-semibold text-black text-[16px] sm:text-[18px]">/KG</span>
-            </p>
-            <div className="w-[30%] md:w-[12%] flex items-center justify-between mr-2 sm:mr-3 gap-1 md:gap-0">
-              <button
-                className="p-2 bg-gray-300 rounded-full sm:p-3 hover:text-white hover:bg-green-500"
-                onClick={() => updateQuantity(item.id, -1)}
-                disabled={!item.quantity}
-              >
-                <FaMinus />
-              </button>
-              <h1>{item.quantity || 0}KG</h1>
-              <button
-                className="p-2 bg-gray-300 rounded-full sm:p-3 hover:text-white hover:bg-green-500"
-                onClick={() => updateQuantity(item.id, 1)}
-              >
-                <FaPlus />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-start justify-center gap-0 mt-6 sm:mt-10">
-            <h1 className="text-[22px] sm:text-[27px] font-semibold">Product Details</h1>
-            <p className="mt-1 text-base text-gray-500 sm:mt-2 sm:text-lg">{item.description}</p>
-          </div>
-        </div>
-
-        <footer className="sticky bottom-0 flex items-center justify-between w-full px-4 py-2 bg-white shadow-2xl sm:px-5 shadow-slate-400">
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-[13px] sm:text-[15px] text-black">Total Price</h1>
-            <p className="text-[24px] sm:text-[30px] font-semibold text-green-500">
-              ${totalPrice}
-            </p>
-          </div>
+    <div className="w-full min-h-screen bg-white">
+      {/* Minimal Header */}
+      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+        <div className="flex items-center justify-between w-full px-4 sm:px-6 md:px-8 py-4">
           <button 
-            className="px-8 sm:px-10 py-2 sm:py-3 mt-4 sm:mt-6 text-white bg-green-600 rounded-[10px]"
-            onClick={handleClick}
+            onClick={() => navigate(-1)}
+            className="flex items-center justify-center p-2 hover:bg-gray-100 rounded-full transition-colors"
           >
-            {item.quantity ? 'Update Cart' : 'Add to Cart'}
+            <IoIosArrowBack className="text-gray-700" size={24} />
           </button>
-        </footer>
+          <h1 className="text-sm font-medium text-gray-600 uppercase tracking-wider">Product Details</h1>
+          <button className="flex items-center justify-center p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <IoNotificationsOutline className="text-gray-700" size={24} />
+          </button>
+        </div>
+      </div>
+
+      {/* Main Content - Split Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          
+          {/* Left Side - Image */}
+          <div className="lg:sticky lg:top-24">
+            <div className="relative aspect-square bg-gradient-to-br from-[#CEEBD7] to-[#E8F5E9] rounded-2xl overflow-hidden shadow-lg">
+              <div
+                className="absolute inset-0 bg-center bg-no-repeat bg-contain p-8 sm:p-12 md:p-16"
+                style={{ backgroundImage: `url(${item.imageUrl})` }}
+              />
+            </div>
+          </div>
+
+          {/* Right Side - Product Info */}
+          <div className="space-y-6 sm:space-y-8">
+            {/* Title */}
+            <div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                {item.title}
+              </h1>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-600">
+                  {item.price}
+                </span>
+                <span className="text-lg sm:text-xl text-gray-500">/KG</span>
+              </div>
+            </div>
+
+            {/* Quantity Selector */}
+            <div className="flex items-center gap-4 py-4">
+              <span className="text-sm font-medium text-gray-700">Quantity:</span>
+              <div className="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-1">
+                <button
+                  className="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                  onClick={() => updateQuantity(item.id, -1)}
+                  disabled={!item.quantity}
+                >
+                  <FaMinus className="text-gray-600" />
+                </button>
+                <span className="w-16 text-center text-lg font-semibold text-gray-900">
+                  {item.quantity || 0} KG
+                </span>
+                <button
+                  className="flex items-center justify-center w-10 h-10 rounded-lg bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  onClick={() => updateQuantity(item.id, 1)}
+                >
+                  <FaPlus />
+                </button>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-gray-200"></div>
+
+            {/* Product Description */}
+            <div>
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">Description</h2>
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+                {item.description}
+              </p>
+            </div>
+
+            {/* Price & Add to Cart */}
+            <div className="pt-6 space-y-4">
+              <div className="flex items-center justify-between p-6 bg-gray-50 rounded-xl">
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Total Price</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-green-600">
+                    ${totalPrice}
+                  </p>
+                </div>
+                {item.quantity > 0 && (
+                  <div className="text-right">
+                    <p className="text-xs text-gray-400">
+                      {item.quantity} KG × {item.price}
+                    </p>
+                  </div>
+                )}
+              </div>
+              
+              <button 
+                className="w-full py-4 sm:py-5 text-lg sm:text-xl font-semibold text-white bg-green-600 rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl"
+                onClick={handleClick}
+              >
+                {item.quantity ? 'Update Cart' : 'Add to Cart'}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

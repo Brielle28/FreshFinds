@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <>
       <Layout>
-        <div className="flex flex-col items-center justify-center w-full bg-white">
+        <div className="flex flex-col items-center justify-center w-full bg-white pb-20 sm:pb-24 md:pb-28">
           <Header />
           <Carousel />
           <Category />

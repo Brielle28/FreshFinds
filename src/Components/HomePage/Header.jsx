@@ -90,38 +90,38 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 z-10 w-full bg-[#d7f3d0]">
-      <div className="flex flex-col items-center justify-center w-full px-4 py-6 md:py-10 md:px-20">
+      <div className="flex flex-col items-center justify-center w-full px-3 py-4 sm:px-4 sm:py-6 md:py-8 lg:py-10 md:px-12 lg:px-20">
         {/* Top Navigation */}
         <div className="flex items-center justify-between w-full max-w-7xl">
           <button 
-            className="flex items-center justify-center p-2 transition-colors bg-white rounded-full hover:bg-gray-100"
+            className="flex items-center justify-center p-1.5 sm:p-2 transition-colors bg-white rounded-full hover:bg-gray-100"
             onClick={() => navigate(-1)}
           >
-            <IoIosArrowBack className="text-black" size={17} />
+            <IoIosArrowBack className="text-black text-sm sm:text-base" size={17} />
           </button>
 
           <div className="flex flex-col items-center justify-center">
-            <div className="flex items-center justify-center gap-2">
-              <span className="text-sm font-semibold text-black md:text-base">
+            <div className="flex items-center justify-center gap-1 sm:gap-2">
+              <span className="text-xs sm:text-sm font-semibold text-black md:text-base">
                 Location
               </span>
             </div>
-            <span className="text-sm font-bold text-black md:text-lg">
+            <span className="text-xs sm:text-sm font-bold text-black md:text-base lg:text-lg">
               Nigeria, Enugu
             </span>
           </div>
 
-          <button className="flex items-center justify-center p-2 transition-colors bg-white rounded-full hover:bg-gray-100">
-            <IoNotificationsOutline className="text-black" size={17} />
+          <button className="flex items-center justify-center p-1.5 sm:p-2 transition-colors bg-white rounded-full hover:bg-gray-100">
+            <IoNotificationsOutline className="text-black text-sm sm:text-base" size={17} />
           </button>
         </div>
 
         {/* Search Section */}
-        <div className="relative w-full max-w-3xl mt-6 md:mt-10" ref={searchRef}>
+        <div className="relative w-full max-w-3xl mt-4 sm:mt-6 md:mt-8 lg:mt-10" ref={searchRef}>
           <div className="relative">
             <input
               type="text"
-              className="w-full py-3 pl-10 pr-4 text-sm transition-shadow bg-white rounded-full outline-none md:text-base focus:ring-2 focus:ring-green-300"
+              className="w-full py-2.5 sm:py-3 pl-9 sm:pl-10 pr-3 sm:pr-4 text-xs sm:text-sm transition-shadow bg-white rounded-full outline-none md:text-base focus:ring-2 focus:ring-green-300"
               placeholder="Search Your Groceries"
               value={searchTerm}
               onChange={handleSearch}
@@ -131,19 +131,19 @@ const Header = () => {
 
           {/* Search Results */}
           {showResults && filteredItems.length > 0 && (
-            <div className="absolute w-full mt-2 overflow-hidden bg-white rounded-lg shadow-lg">
+            <div className="absolute w-full mt-2 overflow-hidden bg-white rounded-lg shadow-lg z-20">
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center p-3 transition-colors cursor-pointer hover:bg-gray-50"
+                  className="flex items-center p-2 sm:p-3 transition-colors cursor-pointer hover:bg-gray-50"
                   onClick={() => handleItemSelect(item)}
                 >
-                  <div className="flex-1">
-                    <h3 className="font-medium text-gray-900">{item.title}</h3>
-                    <p className="text-sm text-gray-500">{item.category}</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-medium text-gray-900 text-xs sm:text-sm md:text-base truncate">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500 truncate">{item.category}</p>
                   </div>
                   {item.price && (
-                    <span className="text-sm font-medium text-green-600">
+                    <span className="text-xs sm:text-sm font-medium text-green-600 ml-2 flex-shrink-0">
                       {item.price}
                     </span>
                   )}
@@ -154,8 +154,8 @@ const Header = () => {
 
           {/* No Results Message */}
           {showResults && searchTerm && filteredItems.length === 0 && (
-            <div className="absolute w-full p-4 mt-2 text-center bg-white rounded-lg shadow-lg">
-              <p className="text-gray-500">No items found</p>
+            <div className="absolute w-full p-3 sm:p-4 mt-2 text-center bg-white rounded-lg shadow-lg z-20">
+              <p className="text-xs sm:text-sm text-gray-500">No items found</p>
             </div>
           )}
         </div>

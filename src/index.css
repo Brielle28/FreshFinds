@@ -13,6 +13,7 @@ html, body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 main {
@@ -21,4 +22,25 @@ main {
 
 footer {
   flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+/* Hide scrollbar for webkit browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

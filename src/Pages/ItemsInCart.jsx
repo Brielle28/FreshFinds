@@ -5,7 +5,7 @@ const ItemsInCart = () => {
   return (
     <>
       <Layout>
-        <div className="h-screen bg-white">
+        <div className="min-h-screen bg-white">
           <ItemsInCartHeader />
           <ItemsInCartList />
         </div>

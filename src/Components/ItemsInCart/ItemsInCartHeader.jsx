@@ -20,34 +20,33 @@ const ItemsInCartHeader = () => {
     //     <IoNotificationsOutline />
     //   </div>
     // </div>
-    <div className="sticky top-0 z-10 flex flex-col items-center justify-center w-full px-4 py-2 bg-white sm:px-6 md:px-20 lg:px-24">
-  <div className="flex items-center justify-between w-full">
-    <div className="flex items-center justify-center gap-2">
-      <IoIosArrowBack
-        className="text-lg sm:text-xl md:text-3xl lg:text-[35px] mt-1 hover:text-green-500"
-        onClick={() => navigate(-1)}
-      />
-      <h1 className="text-black font-bold text-lg sm:text-xl md:text-3xl lg:text-[35px]">
-        Cart
-      </h1>
-      <FaShoppingCart className="text-lg sm:text-xl md:text-3xl lg:text-[35px] text-green-500 mt-1" />
-    </div>
-    <div className="w-[35%] sm:w-[25%] md:w-[20%] lg:w-[15%]">
-      {cartItems.length > 0 && (
-        <Link
-          to="/CheckOut"
-          className="flex items-center justify-center w-full"
-        >
-          <button className="w-full py-2 mt-6 mb-6 text-white bg-green-500 rounded-lg sm:py-3 sm:mt-8 md:mt-10 sm:mb-8 md:mb-10">
-            <h1 className="text-sm font-bold sm:text-base md:text-lg lg:text-xl">
-              Checkout
-            </h1>
+    <div className="sticky top-0 z-10 flex flex-col items-center justify-center w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-3 sm:py-4 bg-white shadow-sm">
+      <div className="flex items-center justify-between w-full max-w-7xl">
+        <div className="flex items-center justify-center gap-2 sm:gap-3">
+          <button onClick={() => navigate(-1)} className="hover:text-green-500 transition-colors">
+            <IoIosArrowBack className="text-base sm:text-lg md:text-xl lg:text-2xl cursor-pointer" />
           </button>
-        </Link>
-      )}
+          <h1 className="text-black font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+            Cart
+          </h1>
+          <FaShoppingCart className="text-base sm:text-lg md:text-xl lg:text-2xl text-green-500" />
+        </div>
+        <div className="w-auto sm:w-[140px] md:w-[160px] lg:w-[180px]">
+          {cartItems.length > 0 && (
+            <Link
+              to="/CheckOut"
+              className="flex items-center justify-center w-full"
+            >
+              <button className="w-full px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 text-white bg-green-500 rounded-lg hover:bg-green-600 transition-colors">
+                <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold">
+                  Checkout
+                </h1>
+              </button>
+            </Link>
+          )}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
   );
 };

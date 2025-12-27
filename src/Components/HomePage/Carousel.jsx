@@ -36,8 +36,8 @@ const Carousel = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center w-[90%] md:mt-[190px] mt-32">
-            <div className="relative w-full mt-16 overflow-hidden sm:w-4/5 rounded-2xl">
+        <div className="flex flex-col items-center w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 md:mt-[180px] lg:mt-[190px] mt-28 sm:mt-32">
+            <div className="relative w-full mt-8 sm:mt-12 md:mt-16 overflow-hidden rounded-xl sm:rounded-2xl">
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -45,18 +45,18 @@ const Carousel = () => {
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className="flex flex-col-reverse md:flex-row items-center justify-center min-w-full px-5 sm:px-10 bg-[#d7f3d0]"
+                            className="flex flex-col-reverse md:flex-row items-center justify-center min-w-full px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 bg-[#d7f3d0]"
                         >
-                            <div className="flex flex-col items-center justify-center w-full mb-3 md:items-start sm:w-1/2">
-                                <h6 className="w-full font-bold leading-7 text-center md:text-3xl sm:w-4/5 sm:text-4xl sm:leading-10 text-blue-950 md:text-left">
+                            <div className="flex flex-col items-center justify-center w-full mb-3 sm:mb-4 md:mb-0 md:items-start md:w-1/2 md:pr-4">
+                                <h6 className="w-full font-bold leading-tight sm:leading-6 md:leading-7 lg:leading-8 text-center text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-blue-950 md:text-left">
                                     {slide.title}
                                 </h6>
-                                <div className="px-3 mt-2 md:mt-5 font-semibold border-0 transition-colors btn text-black hover:text-white bg-white hover:bg-[#6ddb51]">
+                                <button className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 mt-3 sm:mt-4 md:mt-5 text-xs sm:text-sm md:text-base font-semibold border-0 transition-colors rounded-lg text-black hover:text-white bg-white hover:bg-[#6ddb51]">
                                     Order Now
-                                </div>
+                                </button>
                             </div>
                             <div
-                                className="w-40 h-40 mb-5 bg-center bg-no-repeat bg-contain sm:w-52 sm:h-52 lg:w-64 lg:h-64 sm:mb-0 animate-zoomAndDance"
+                                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mb-3 sm:mb-4 md:mb-0 bg-center bg-no-repeat bg-contain animate-zoomAndDance"
                                 style={{ backgroundImage: `url('${slide.image}')` }}
                             />
                         </div>
@@ -64,12 +64,12 @@ const Carousel = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center gap-2 py-2">
+            <div className="flex justify-center gap-1.5 sm:gap-2 py-3 sm:py-4">
                 {slides.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => handleSlideChange(index)}
-                        className={`btn btn-xs border-0 ${activeIndex === index ? 'bg-[#6ddb51] text-white' : 'bg-white text-black'}`}
+                        className={`btn btn-xs sm:btn-sm border-0 text-xs sm:text-sm ${activeIndex === index ? 'bg-[#6ddb51] text-white' : 'bg-white text-black'}`}
                     >
                         {index + 1}
                     </button>

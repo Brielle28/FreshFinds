@@ -6,28 +6,28 @@ const CheckoutSteps = () => {
 
   return (
     <>
-      <div className="fixed z-10 flex items-center justify-center w-full top-[40px] md:top-[90px] bg-white">
-        <div className="flex items-center justify-center w-[85%] ml-10 bg-white lg:ml-52">
-          <ol className="flex items-center justify-center w-[100%] py-4">
+      <div className="fixed z-10 flex items-center justify-center w-full top-[60px] sm:top-[70px] md:top-[80px] lg:top-[90px] bg-white shadow-sm">
+        <div className="flex items-center justify-center w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8 bg-white">
+          <ol className="flex items-center justify-center w-full py-3 sm:py-4">
             {steps.map((step, index) => (
                 <li
                   key={index}
                   className={`flex w-full items-center ${
                     index < steps.length - 1
                       ? index <= currentStep
-                        ? "text-green-500 after:w-full after:h-1 after:border-b after:border-green-500"
-                        : "after:w-full after:h-1 after:border-b after:border-gray-200"
+                        ? "text-green-500 after:w-full after:h-0.5 sm:after:h-1 after:border-b after:border-green-500"
+                        : "after:w-full after:h-0.5 sm:after:h-1 after:border-b after:border-gray-200"
                       : ""
                   }`}
                 >
                   <span
-                    className={`flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 ${
+                    className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:h-12 lg:w-12 rounded-full flex-shrink-0 ${
                       index <= currentStep ? "bg-green-500" : "bg-gray-100"
                     }`}
                   >
                     {index <= currentStep ? (
                       <svg
-                        className="w-4 h-4 text-white"
+                        className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 16 12"
@@ -42,7 +42,7 @@ const CheckoutSteps = () => {
                       </svg>
                     ) : (
                       <svg
-                        className="w-4 h-4 text-gray-500"
+                        className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-gray-500"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
                         viewBox="0 0 20 16"
